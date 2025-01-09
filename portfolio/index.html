@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
   <title>My Portfolio</title>
 	<link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -10,6 +10,7 @@
 	<header class="l_header">
 		<h1 class="l_header_ttl">Portfolio Site</h1>
 		<nav>
+			<button type="button" class="l_header_nav_icon js_nav_btn"></button>
 			<ul class="l_header_nav">
 				<li><a href="#works">Works</a></li>
 				<li><a href="#skill">Skill & Tools</a></li>
@@ -21,9 +22,14 @@
 	<main class="l_content">
 
 		<div class="kv">
+			<div class="kv-bg">
+				<img src="./assets/img/bg_kv_01.jpg" alt="">
+			</div>
 			<div class="kv_ttl">
-				<h1>Chris<br>Sugimoto</h1>
-				<p>Portfolio Site</p>
+				<div>
+					<h1>Chris<br>Sugimoto</h1>
+					<p>Portfolio Site</p>
+				</div>
 			</div>
 		</div>
 
@@ -35,7 +41,7 @@
 					<li>
 						<div class="works">
 							<div class="works_head">
-								<img src="https://placehold.jp/3d6eff/ffffff/800x450.png" alt="" class="works_img">
+								<img src="./assets/img/img_works_05.jpg" alt="宿泊予約サイト【Relax】" class="works_img">
 							</div>
 							<div class="works_body">
 								<h2 class="works_ttl">宿泊予約サイト【Relax】</h2>
@@ -54,18 +60,20 @@
 					<li>
 						<div class="works">
 							<div class="works_head">
-								<img src="https://placehold.jp/3d6eff/ffffff/800x450.png" alt="" class="works_img">
+								<img src="./assets/img/img_works_04.jpg" alt="大学受験向け参考書検索・オウンドメディアサイト【Studico】" class="works_img">
 							</div>
 							<div class="works_body">
-								<h2 class="works_ttl">宿泊予約サイト【Relax】</h2>
-								<p class="works_link"><a href="https://rlx.jp/">https://rlx.jp/</a></p>
-								<p class="works_txt">サイト全体のUI更新を目的とした大型リニューアル作業及びその後の保守運用を行いました。</p>
+								<h2 class="works_ttl">大学受験向け参考書検索・オウンドメディアサイト【Studico】</h2>
+								<p class="works_link"><a href="https://www.studico.jp/">https://www.studico.jp/</a></p>
+								<p class="works_txt">ゼロベースから検索サジェストを除くほぼすべてのフロント部分を担当。<br>オウンドメディア部分ではWordpressのテーマ構築やWYSIWYGエディタのカスタマイズも担当しました。</p>
 								<ul class="labels">
 									<li>HTML</li>
 									<li>CSS</li>
 									<li>JQuery</li>
 									<li>SCSS</li>
-									<li>Figma</li>
+									<li>Wordpress</li>
+									<li>Photoshop</li>
+									<li>Nunjucks</li>
 								</ul>
 							</div>
 						</div>
@@ -73,18 +81,17 @@
 					<li>
 						<div class="works">
 							<div class="works_head">
-								<img src="https://placehold.jp/3d6eff/ffffff/800x450.png" alt="" class="works_img">
+								<img src="./assets/img/img_works_03.jpg" alt="フィットネスクラブ公式サイト【TIPNESS】" class="works_img">
 							</div>
 							<div class="works_body">
-								<h2 class="works_ttl">宿泊予約サイト【Relax】</h2>
-								<p class="works_link"><a href="https://rlx.jp/">https://rlx.jp/</a></p>
-								<p class="works_txt">サイト全体のUI更新を目的とした大型リニューアル作業及びその後の保守運用を行いました。</p>
+								<h2 class="works_ttl">フィットネスクラブ公式サイト<br>【TIPNESS】</h2>
+								<p class="works_link"><a href="https://www.tipness.co.jp/">https://www.tipness.co.jp/</a></p>
+								<p class="works_txt">保守運用を担当。<br>期間ごとのキャンペーン開催に伴うテキスト更新やコンテンツの出し分けなど、軽微な作業が主だった内容でした。</p>
 								<ul class="labels">
 									<li>HTML</li>
 									<li>CSS</li>
 									<li>JQuery</li>
 									<li>SCSS</li>
-									<li>Figma</li>
 								</ul>
 							</div>
 						</div>
@@ -92,18 +99,19 @@
 					<li>
 						<div class="works">
 							<div class="works_head">
-								<img src="https://placehold.jp/3d6eff/ffffff/800x450.png" alt="" class="works_img">
+								<img src="./assets/img/img_works_02.jpg" alt="自動車メーカー公式サイト【Renault Japon | Official Web Site】" class="works_img">
 							</div>
 							<div class="works_body">
-								<h2 class="works_ttl">宿泊予約サイト【Relax】</h2>
-								<p class="works_link"><a href="https://rlx.jp/">https://rlx.jp/</a></p>
-								<p class="works_txt">サイト全体のUI更新を目的とした大型リニューアル作業及びその後の保守運用を行いました。</p>
+								<h2 class="works_ttl">自動車メーカー公式サイト【Renault Japon | Official Web Site】</h2>
+								<p class="works_link"><a href="https://www.renault.jp/">https://www.renault.jp/</a></p>
+								<p class="works_txt">保守運用を担当。<br>製品情報の追加や、メニューの更新などを行っておりました。</p>
 								<ul class="labels">
 									<li>HTML</li>
 									<li>CSS</li>
 									<li>JQuery</li>
 									<li>SCSS</li>
-									<li>Figma</li>
+									<li>Photoshop</li>
+									<li>EJS</li>
 								</ul>
 							</div>
 						</div>
@@ -111,18 +119,20 @@
 					<li>
 						<div class="works">
 							<div class="works_head">
-								<img src="https://placehold.jp/3d6eff/ffffff/800x450.png" alt="" class="works_img">
+								<img src="./assets/img/img_works_01.jpg" alt="飲食店の居抜き店舗売却・買取りサイト【居抜き売却市場】" class="works_img">
 							</div>
 							<div class="works_body">
-								<h2 class="works_ttl">宿泊予約サイト【Relax】</h2>
-								<p class="works_link"><a href="https://rlx.jp/">https://rlx.jp/</a></p>
-								<p class="works_txt">サイト全体のUI更新を目的とした大型リニューアル作業及びその後の保守運用を行いました。</p>
+								<h2 class="works_ttl">飲食店の居抜き店舗売却・買取りサイト【居抜き売却市場】</h2>
+								<p class="works_link"><a href="https://inukibaikyaku.jp/">https://inukibaikyaku.jp/</a></p>
+								<p class="works_txt">サイト全体のリニューアル、Wordpressのテーマ構築を担当しました。</p>
 								<ul class="labels">
 									<li>HTML</li>
 									<li>CSS</li>
 									<li>JQuery</li>
 									<li>SCSS</li>
-									<li>Figma</li>
+									<li>Wordpress</li>
+									<li>Photoshop</li>
+									<li>EJS</li>
 								</ul>
 							</div>
 						</div>
@@ -132,14 +142,237 @@
 		</section>
 
 		<section class="m_sec m_sec--gray" id="skill">
-			<h1 class="m_ttl1">Skill & Tools</h1>
+			<div class="m_sec_inner">
+				<h1 class="m_ttl1">Skill & Tools</h1>
+				<ul class="skills">
+					<li>
+						<div class="skills_item">
+							<div class="skills_item_icon">
+								<img src="./assets/img/icon/html.svg" alt="" width="60" height="60">
+							</div>
+							<dl class="skills_item_txt">
+								<dt>HTML</dt>
+								<dd>7年</dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<div class="skills_item">
+							<div class="skills_item_icon">
+								<img src="./assets/img/icon/css.svg" alt="" width="60" height="60">
+							</div>
+							<dl class="skills_item_txt">
+								<dt>CSS</dt>
+								<dd>7年</dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<div class="skills_item">
+							<div class="skills_item_icon">
+								<img src="./assets/img/icon/sass.svg" alt="" width="60" height="60">
+							</div>
+							<dl class="skills_item_txt">
+								<dt>SASS</dt>
+								<dd>7年</dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<div class="skills_item">
+							<div class="skills_item_icon">
+								<img src="./assets/img/icon/js.svg" alt="" width="60" height="60">
+							</div>
+							<dl class="skills_item_txt">
+								<dt>Javascript</dt>
+								<dd>5年</dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<div class="skills_item">
+							<div class="skills_item_icon">
+								<img src="./assets/img/icon/jquery.svg" alt="" width="60" height="60">
+							</div>
+							<dl class="skills_item_txt">
+								<dt>JQuery</dt>
+								<dd>5年</dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<div class="skills_item">
+							<div class="skills_item_icon">
+								<img src="./assets/img/icon/php.svg" alt="" width="60" height="60">
+							</div>
+							<dl class="skills_item_txt">
+								<dt>PHP</dt>
+								<dd>3年</dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<div class="skills_item">
+							<div class="skills_item_icon">
+								<img src="./assets/img/icon/wordpress.svg" alt="" width="60" height="60">
+							</div>
+							<dl class="skills_item_txt">
+								<dt>Wordpress</dt>
+								<dd>3年</dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<div class="skills_item">
+							<div class="skills_item_icon">
+								<img src="./assets/img/icon/node.js.svg" alt="" width="60" height="60">
+							</div>
+							<dl class="skills_item_txt">
+								<dt>Node.js</dt>
+								<dd>1年</dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<div class="skills_item">
+							<div class="skills_item_icon">
+								<img src="./assets/img/icon/ejs.svg" alt="" width="60" height="60">
+							</div>
+							<dl class="skills_item_txt">
+								<dt>EJS</dt>
+								<dd>2年</dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<div class="skills_item">
+							<div class="skills_item_icon">
+								<img src="./assets/img/icon/nunjucks.svg" alt="" width="60" height="60">
+							</div>
+							<dl class="skills_item_txt">
+								<dt>Nunjucks</dt>
+								<dd>3年</dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<div class="skills_item">
+							<div class="skills_item_icon">
+								<img src="./assets/img/icon/figma.svg" alt="" width="60" height="60">
+							</div>
+							<dl class="skills_item_txt">
+								<dt>Figma</dt>
+								<dd>3年</dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<div class="skills_item">
+							<div class="skills_item_icon">
+								<img src="./assets/img/icon/photoshop.svg" alt="" width="60" height="60">
+							</div>
+							<dl class="skills_item_txt">
+								<dt>Photoshop</dt>
+								<dd>3年</dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<div class="skills_item">
+							<div class="skills_item_icon">
+								<img src="./assets/img/icon/illustrator.svg" alt="" width="60" height="60">
+							</div>
+							<dl class="skills_item_txt">
+								<dt>Illustrator</dt>
+								<dd>1年</dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<div class="skills_item">
+							<div class="skills_item_icon">
+								<img src="./assets/img/icon/backlog.svg" alt="" width="60" height="60">
+							</div>
+							<dl class="skills_item_txt">
+								<dt>Backlog</dt>
+								<dd>4年</dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<div class="skills_item">
+							<div class="skills_item_icon">
+								<img src="./assets/img/icon/bitbucket.svg" alt="" width="60" height="60">
+							</div>
+							<dl class="skills_item_txt">
+								<dt>Bitbucket</dt>
+								<dd>5年</dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<div class="skills_item">
+							<div class="skills_item_icon">
+								<img src="./assets/img/icon/jira.svg" alt="" width="60" height="60">
+							</div>
+							<dl class="skills_item_txt">
+								<dt>Jira</dt>
+								<dd>3年</dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<div class="skills_item">
+							<div class="skills_item_icon">
+								<img src="./assets/img/icon/confluence.svg" alt="" width="60" height="60">
+							</div>
+							<dl class="skills_item_txt">
+								<dt>Confluence</dt>
+								<dd>3年</dd>
+							</dl>
+						</div>
+					</li>
+				</ul>
+			</div>
 		</section>
 
 		<section class="m_sec" id="about">
-			<h1 class="m_ttl1">About</h1>
+			<div class="m_sec_inner">
+				<h1 class="m_ttl1">About</h1>
+				<div class="about">
+					<div class="about_img">
+						<img src="./assets/img/pic_about_01.jpg" alt="杉本くりす Chris Sugimoto">
+					</div>
+					<div class="about_detail">
+						<div class="about_job">Web Coder</div>
+						<h2 class="about_name">
+							杉本くりす<span class="about_name_en">Chris Sugimoto</span>
+						</h2>
+						<p class="about_txt">
+							1993年生まれ／兵庫県出身<br>
+							高校卒業後、地元の工場に勤めるが怪我をきっかけに退職。<br>
+							WEB業界での就職を志し専門学校へ入学。コーディングの魅力を知る。<br>
+							卒業後は都内の制作会社に就職しLP制作やコーポレートサイト制作、Wordpressサイト構築などを担当。<br>
+							現在は自身のスキルの幅を広げるべく、デザインを学習中。
+						</p>
+					</div>
+				</div>
+			</div>
 		</section>
 	</main>
 
 	<footer class="l_footer">© 2025 Chris Sugimoto All Rights Reserved.</footer>
+
+	<script src="./assets/js/jquery-3.7.1.min.js"></script>
+	<script>
+		jQuery('.js_nav_btn').on('click', function() {
+			$(this).toggleClass('is_open');
+			if(jQuery('.l_header_nav').css('display') === 'block') {
+				jQuery('.l_header_nav').slideUp('1500');
+			}else {
+				jQuery('.l_header_nav').slideDown('1500');
+			}
+		});
+	</script>
 </body>
 </html>
