@@ -9,8 +9,8 @@
 <body class="index">
 	<header class="l_header">
 		<h1 class="l_header_ttl">Portfolio Site</h1>
-		<nav>
-			<button type="button" class="l_header_nav_icon js_nav_btn"></button>
+		<button type="button" class="l_header_nav_icon js_nav_btn"></button>
+		<nav class="l_header_navWrap">
 			<ul class="l_header_nav">
 				<li><a href="#works">Works</a></li>
 				<li><a href="#skill">Skill & Tools</a></li>
@@ -365,13 +365,58 @@
 
 	<script src="./assets/js/jquery-3.7.1.min.js"></script>
 	<script>
-		jQuery('.js_nav_btn').on('click', function() {
+		$('.js_nav_btn').on('click', function() {
 			$(this).toggleClass('is_open');
-			if(jQuery('.l_header_nav').css('display') === 'block') {
-				jQuery('.l_header_nav').slideUp('1500');
+			if($('.l_header_navWrap').css('display') === 'block') {
+				$('.l_header_navWrap').slideUp('1500');
 			}else {
-				jQuery('.l_header_nav').slideDown('1500');
+				$('.l_header_navWrap').slideDown('1500');
 			}
+		});
+
+		$('.l_header_nav a').on('click', function() {
+			if ($(window).width() <= 767) {
+				$('.js_nav_btn').toggleClass('is_open');
+				if($('.l_header_navWrap').css('display') === 'block') {
+					$('.l_header_navWrap').slideUp('1500');
+				}else {
+					$('.l_header_navWrap').slideDown('1500');
+				}
+			}
+		});
+
+		$(window).on('resize', function () {
+			if ($(window).width() > 767) {
+				$('.l_header_navWrap').removeAttr('style');
+			}
+		})
+
+		$(window).on('load scroll resize',() => {
+			const nav = $('.l_header_nav'),
+				scroll = $(window).scrollTop(),
+				headerHeight = $('.l_header').outerHeight();
+
+			//ナビゲーションの位置までスクロールしたか判定
+			const content = $('.m_sec');
+
+			//コンテンツごとに繰り返し処理
+			content.each(function(i,e){
+				//コンテンツの開始位置を取得
+				const target = $(this).offset().top,
+					//コンテンツの終了位置を取得
+					targetPosition = target + $(this).innerHeight(),
+					//コンテンツのID属性を取得
+					id = $(e).attr('id');
+
+				//該当するコンテンツまでスクロールしているか判定　＆＆ 該当するコンテンツを通り過ぎたか判定
+				if(scroll >= target - headerHeight && scroll < targetPosition - headerHeight){
+					//該当するhref属性にクラスを付与
+					nav.find('a[href^="#' + id  + '"]').addClass('is_current');
+				}else{
+					//該当しないhref属性はクラスを削除
+					nav.find('a[href^="#' + id  + '"]').removeClass('is_current');
+				}
+			});
 		});
 	</script>
 </body>

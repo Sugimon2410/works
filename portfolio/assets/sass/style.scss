@@ -49,6 +49,8 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding: 80px;
 }
 
 body {
@@ -71,7 +73,7 @@ ul,ol,dl {
 }
 
 .l_header {
-  font-family: Montserrat, NotoSansJP, Poppins, "Zen Kaku Gothic New", system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+  font-family: Montserrat;
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -106,6 +108,10 @@ ul,ol,dl {
   }
 }
 
+.l_header_navWrap {
+  display: block;
+}
+
 .l_header_nav {
   display: flex;
   > li {
@@ -117,8 +123,10 @@ ul,ol,dl {
     > a {
       color: #000;
       text-decoration: none;
-      font-weight: bold;
       font-size: 2.4rem;
+      &.is_current {
+        color: #FF731D;
+      }
       &:hover {
         opacity: .7;
       }
@@ -126,20 +134,26 @@ ul,ol,dl {
   }
 }
 
+
+.l_content > .m_sec:last-child {
+  min-height: calc(100vh - 80px);
+}
+
 .kv {
-  height: 100vh;
+  height: calc(100vh - 80px);
   background-color: #777;
   position: sticky;
-  top: 0;
+  top: 80px;
   left: 0;
   right: 0;
   z-index: -1;
+  margin-top: 80px;
 }
 
 .kv-bg {
   position: absolute;
   top: 0;
-  left: 30%;
+  left: 41%;
   right: 0;
   bottom: 0;
   img {
@@ -171,20 +185,21 @@ ul,ol,dl {
     bottom: 0;
     background-color: #000;
     z-index: 0;
-    clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%)
+    clip-path: polygon(0 0, 100% 0, calc(100% - 25vh) 100%, 0 100%);
+
   }
   h1 {
     margin: 0;
     font-weight: normal;
     font-size: 9.6rem;
-    font-family: JuliusSansOne, Montserrat, NotoSansJP, Poppins, "Zen Kaku Gothic New", system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+    font-family: JuliusSansOne;
     position: relative;
     border-bottom: 1px solid #FF731D;
     display: inline-block;
     margin-bottom: 20px;
   }
   p {
-    font-family: Montserrat, NotoSansJP, Poppins, "Zen Kaku Gothic New", system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+    font-family: Montserrat;
     font-size: 3.2rem;
     position: relative;
   }
@@ -204,9 +219,10 @@ ul,ol,dl {
 }
 
 .m_ttl1 {
-  font-family: Montserrat, NotoSansJP, Poppins, "Zen Kaku Gothic New", system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+  font-family: Montserrat;
   font-size: 4rem;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .worksList {
@@ -345,14 +361,14 @@ ul,ol,dl {
 }
 
 .about_job {
-  font-family: Caveat, NotoSansJP, Poppins, "Zen Kaku Gothic New", system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+  font-family: Caveat;
   color: #FF731D;
   font-size: 3.6rem;
   margin-bottom: 4px;
 }
 
 .about_name {
-  font-family: Montserrat, NotoSansJP, Poppins, "Zen Kaku Gothic New", system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+  font-family: Montserrat;
   font-size: 3.2rem;
   display: flex;
   align-items: baseline;
@@ -366,7 +382,7 @@ ul,ol,dl {
 }
 
 .about_txt {
-  font-family: Montserrat, NotoSansJP, Poppins, "Zen Kaku Gothic New", system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+  font-family: Montserrat;
   font-size: 2rem;
   margin-bottom: 0;
   line-height: 30px;
@@ -374,7 +390,7 @@ ul,ol,dl {
 }
 
 .l_footer {
-  font-family: Montserrat, NotoSansJP, Poppins, "Zen Kaku Gothic New", system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+  font-family: Montserrat;
   background-color: #000;
   color: #FFF;
   display: flex;
@@ -384,6 +400,10 @@ ul,ol,dl {
 }
 
 @media screen and (max-width: 767px) {
+  html {
+    scroll-padding: 60px;
+  }
+
   .l_header {
     height: 60px;
     padding: 0 16px;
@@ -397,14 +417,18 @@ ul,ol,dl {
     display: block;
   }
 
-  .l_header_nav {
+  .l_header_navWrap {
+    display: none;
     position: fixed;
     top: 60px;
     left: 0;
     right: 0;
+  }
+
+  .l_header_nav {
+    display: block;
     background-color: #FFF;
     border-bottom: 1px solid #CCC;
-    display: none;
     z-index: -1;
     > li {
       padding: 0;
@@ -414,15 +438,21 @@ ul,ol,dl {
       > a {
         display: block;
         padding: 16px;
-        color: #000;
-        text-decoration: none;
-        font-weight: bold;
         font-size: 1.6rem;
         &:hover {
           opacity: .7;
         }
       }
     }
+  }
+
+  .l_content > .m_sec:last-child {
+    min-height: calc(100vh - 60px);
+  }
+
+  .kv {
+    top: 60px;
+    margin-top: 60px;
   }
   
   .kv-bg {
