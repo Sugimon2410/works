@@ -90,6 +90,14 @@ ul,ol,dl {
   font-weight: normal;
   font-size: 3.2rem;
   margin: 0;
+  color: #000;
+  a {
+    color: currentColor;
+    text-decoration: none;
+    &:hover {
+      opacity: .7;
+    }
+  }
 }
 
 .l_header_nav_icon {

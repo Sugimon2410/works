@@ -8,7 +8,7 @@
 </head>
 <body class="index">
 	<header class="l_header">
-		<h1 class="l_header_ttl">Portfolio Site</h1>
+		<h1 class="l_header_ttl"><a href="./">Portfolio Site</a></h1>
 		<button type="button" class="l_header_nav_icon js_nav_btn"></button>
 		<nav class="l_header_navWrap">
 			<ul class="l_header_nav">
@@ -409,7 +409,7 @@
 					id = $(e).attr('id');
 
 				//該当するコンテンツまでスクロールしているか判定　＆＆ 該当するコンテンツを通り過ぎたか判定
-				if(scroll >= target - headerHeight && scroll < targetPosition - headerHeight){
+				if(scroll >= target - 80 && scroll < targetPosition - 80){
 					//該当するhref属性にクラスを付与
 					nav.find('a[href^="#' + id  + '"]').addClass('is_current');
 				}else{
