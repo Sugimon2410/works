@@ -549,8 +549,29 @@ ul, ol, dl {
 }
 
 .kv {
-  height: calc(100vh - 64px);
+  height: calc(100vh - 6.4rem);
   background-color: #ccc;
+}
+
+.m_newsList > li:not(:last-child) {
+  border-bottom: 0.1rem solid #DDD;
+  margin-bottom: 2rem;
+}
+
+.m_newsList_item > dt {
+  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+}
+.m_newsList_item > dt span {
+  background-color: #298C11;
+  color: #FFF;
+  padding: 0.2rem 0.8rem;
+  border-radius: 0.4rem;
+  margin-left: 2rem;
+}
+.m_newsList_item > dd {
+  margin: 0;
+  padding-bottom: 2rem;
 }
 
 @media screen and (width > 768px) {
@@ -660,6 +681,10 @@ ul, ol, dl {
   .kv {
     height: calc(100vh - 10rem);
     background-color: #ccc;
+  }
+  .m_newsList_item {
+    display: flex;
+    gap: 2rem;
   }
   br.is_sp_show {
     display: none;
