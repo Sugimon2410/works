@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <title>株式会社 明工</title>
+	<link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body class="index">
+	<header class="l_header">
+		<h1 class="l_header_ttl"><a href="./"><img src="./assets/img/logo_meiko_01.png" alt=""></a></h1>
+		<button type="button" class="l_header_nav_icon js_nav_btn"></button>
+		<nav class="l_header_navWrap">
+			<ul class="l_header_nav">
+				<li><a href="">HOME</a></li>
+				<li><a href="">明工の強み</a></li>
+				<li><a href="">明工の技術</a></li>
+				<li><a href="">製品紹介</a></li>
+				<li><a href="">会社案内</a></li>
+				<li><a href="">採用情報</a></li>
+				<li><a href="">お知らせ</a></li>
+				<li class="l_header_nav_btn green"><a href="">採用エントリー</a></li>
+				<li class="l_header_nav_btn yellow"><a href="">お問い合わせ</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="l_content">
+
+		<div class="kv">
+			<div class="kv-bg">
+			  <img src="./assets/img/bg_kv_01.jpg" alt="">
+			</div>
+			<div class="kv_ttl">
+				<div>
+					<h1>明工のモノづくりが、<br>あなたの生活を豊かにする。</h1>
+					<p>明工は、建築金物、サッシ金物、内装建材、アルミ形材加工品の製造販売を行っています。<br>大阪、富山、岡山、滋賀に生産工場を有し、日本全国に製品を納入しています。</p>
+				</div>
+			</div>
+		</div>
+
+    <section class="m_sec">
+      <div class="m_sec_inner">
+        <h1 class="m_sec_ttl"><span>ABOUT MEIKOU</span></h1>
+        <h2 class="m_ttl">こんなモノ、作ってます！</h2>
+        <h2 class="m_ttl">ここまで、やります！</h2>
+        <div class="m_btn">
+          <a href="" class="m_btn">明工の技術をもっと詳しく見る</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="m_sec m_sec--gray">
+      <div class="m_sec_inner">
+        <h1 class="m_sec_ttl"><span>TECHNOLOGY</span></h1>
+        <h2 class="m_ttl">明工は、何が得意なの？</h2>
+        <div class="m_btn">
+          <a href="">明工の強みをもっと詳しく見る</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="m_sec">
+      <div class="m_sec_inner">
+        <h1 class="m_sec_ttl"><span>PRODUCTS</span></h1>
+        <h2 class="m_ttl">製品紹介</h2>
+        <div class="m_btn">
+          <a href="">明工の強みをもっと詳しく見る</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="m_sec m_sec--green">
+      <div class="m_sec_inner">
+        <h1 class="m_sec_ttl"><span>RECRUIT</span></h1>
+        <h2 class="m_ttl">採用情報</h2>
+        <div class="m_btn m_btn--type2">
+          <a href="">採用情報をみる</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="m_sec">
+      <div class="m_sec_inner">
+        <h1 class="m_sec_ttl"><span>INSTAGRAM</span></h1>
+        <h2 class="m_ttl">明工スタッフの<br class="is_sp_show">様子を見てみよう</h2>
+      </div>
+    </section>
+
+    <section class="m_sec">
+      <div class="m_sec_inner">
+        <h1 class="m_sec_ttl"><span>NEWS</span></h1>
+        <h2 class="m_ttl">お知らせ</h2>
+      </div>
+    </section>
+
+    <section class="m_sec m_sec--gray">
+      <div class="m_sec_inner">
+        <h1 class="m_sec_ttl"><span>CONTACT</span></h1>
+      </div>
+    </section>
+
+	</main>
+
+	<footer class="l_footer">
+    <div class="l_footer_inner">
+      <div class="l_footer_row">
+        <div class="l_footer_logo">
+          <a href="./"><img src="./assets/img/logo_meiko_01.png" alt=""></a>
+        </div>
+        <nav class="l_footer_navWrap">
+          <ul class="l_footer_nav">
+            <li><a href="">HOME</a></li>
+            <li><a href="">明工の強み</a></li>
+            <li><a href="">明工の技術</a></li>
+            <li><a href="">製品紹介</a></li>
+            <li><a href="">会社案内</a></li>
+            <li><a href="">採用情報</a></li>
+            <li><a href="">お知らせ</a></li>
+            <li><a href="">採用エントリー</a></li>
+            <li><a href="">お問い合わせ</a></li>
+          </ul>
+        </nav>
+      </div>
+      <p class="l_footer_copy">（C） 2024 MEIKO Co. ,Ltd ALLRIGHTS RESERVED.</p>
+    </div>
+  </footer>
+
+	<script src="./assets/js/jquery-3.7.1.min.js"></script>
+	<script>
+    $(function () {
+      $('.js_nav_btn').click(function () {
+        $('.js_nav_btn').toggleClass('is_open');
+        $('.l_header_nav').toggleClass('is_open');
+      })
+    })
+	</script>
+</body>
+</html>
