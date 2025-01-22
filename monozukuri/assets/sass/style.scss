@@ -277,6 +277,12 @@ dl {
   }
 }
 
+.body {
+  &.is_nav_open {
+    overflow: hidden;
+  }
+}
+
 .kv {
   height: calc(100vh - 6.4rem);
   background-color: #ccc;
@@ -610,6 +616,12 @@ dl {
 
   br.is_sp_show {
     display: none;
+  }
+
+  .body {
+    &.is_nav_open {
+      overflow: unset;
+    }
   }
 
   .kv {

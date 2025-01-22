@@ -566,6 +566,10 @@ dl > dd {
   background-image: url(../img/icon_arrow_right_03.svg);
 }
 
+.body.is_nav_open {
+  overflow: hidden;
+}
+
 .kv {
   height: calc(100vh - 6.4rem);
   background-color: #ccc;
@@ -851,6 +855,9 @@ dl > dd {
   }
   br.is_sp_show {
     display: none;
+  }
+  .body.is_nav_open {
+    overflow: unset;
   }
   .kv {
     background-image: url(../img/bg_kv_01.jpg);

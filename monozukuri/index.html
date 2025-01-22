@@ -6,13 +6,13 @@
   <title>株式会社 明工</title>
 	<link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body class="index">
+<body class="body index">
 	<header class="l_header">
 		<h1 class="l_header_ttl"><a href="./"><img src="./assets/img/logo_meiko_01.png" alt=""></a></h1>
 		<button type="button" class="l_header_nav_icon js_nav_btn"></button>
 		<nav class="l_header_navWrap">
 			<ul class="l_header_nav">
-				<li><a href="#">HOME</a></li>
+				<li><a href="./">HOME</a></li>
 				<li><a href="#">明工の強み</a></li>
 				<li><a href="#">明工の技術</a></li>
 				<li><a href="#">製品紹介</a></li>
@@ -312,6 +312,7 @@
       $('.js_nav_btn').click(function () {
         $('.js_nav_btn').toggleClass('is_open');
         $('.l_header_nav').toggleClass('is_open');
+        $('.body').toggleClass('is_nav_open')
       })
     })
 	</script>
