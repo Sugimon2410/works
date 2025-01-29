@@ -8,26 +8,26 @@
 </head>
 <body class="body index">
 	<header class="l_header">
-		<h1 class="l_header_logo">TEST COMPANY</h1>
+		<h1 class="l_header_logo"><a href="./">TEST COMPANY</a></h1>
 		<nav class="l_header_nav">
 			<ul class="l_header_navList">
 				<li>
-					<a href="#" class="l_header_nav_link">COMPANY</a>
+					<a href="#company" class="l_header_nav_link">COMPANY</a>
 				</li>
 				<li>
-					<a href="#" class="l_header_nav_link">SERVICE</a>
+					<a href="#service" class="l_header_nav_link">SERVICE</a>
 				</li>
 				<li>
-					<a href="#" class="l_header_nav_link">CASES</a>
+					<a href="#cases" class="l_header_nav_link">CASES</a>
 				</li>
 				<li>
-					<a href="#" class="l_header_nav_link">NEWS</a>
+					<a href="#news" class="l_header_nav_link">NEWS</a>
 				</li>
 				<li>
-					<a href="#" class="l_header_nav_link">RECRUIT</a>
+					<a href="#recruit" class="l_header_nav_link">RECRUIT</a>
 				</li>
 				<li>
-					<a href="#" class="l_header_nav_link">CONTACT</a>
+					<a href="#contact" class="l_header_nav_link">CONTACT</a>
 				</li>
 			</ul>
 		</nav>
@@ -48,7 +48,7 @@
 			</div>
 		</div>
 
-		<div class="m_sec m_sec--message">
+		<div class="m_sec m_sec--message" id="company">
 			<div class="m_sec_inner">
 				<p class="company_txt">クライアント企業のニーズ・<br>
 					現場の実態を具体的に把握し、<br>
@@ -62,7 +62,7 @@
 		</div>
 
 		<div class="m_group">
-			<section class="m_sec">
+			<section class="m_sec m_sec--service" id="service">
 				<div class="m_sec_inner">
 					<div class="m_sec_head">
 						<h1 class="m_ttl">Service</h1>
@@ -105,7 +105,7 @@
 				</div>
 			</section>
 
-			<section class="m_sec m_sec--cases">
+			<section class="m_sec m_sec--cases" id="cases">
 				<div class="m_sec_inner">
 					<div class="m_sec_head">
 						<h1 class="m_ttl">Cases</h1>
@@ -172,10 +172,10 @@
 		</div>
 
 		<div class="m_group2">
-			<section class="m_sec m_sec--news">
+			<section class="m_sec m_sec--news" id="news">
 				<div class="m_sec_inner">
 					<div class="m_sec_body">
-						<div>
+						<div class="news_head">
 							<h1 class="m_ttl m_ttl--small">News</h1>
 							<div class="m_btnWrap">
 								<a href="" class="m_btn">View More
@@ -215,7 +215,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="m_sec m_sec--recruit">
+			<section class="m_sec m_sec--recruit" id="recruit">
 				<div class="m_sec_inner">
 					<div class="recruit">
 						<div class="recruit_head">
@@ -235,7 +235,7 @@
 			</section>
 		</div>
 
-		<a href="" class="contact">
+		<a href="" class="contact" id="contact">
 			<h1 class="m_ttl">Contact</h1>
 			<p class="contact_txt">各種コンサルティングのご依頼はこちら</p>
 			<div class="contact_icon"></div>
@@ -308,6 +308,36 @@
 				}
 			}
 			
+		});
+
+		
+
+		$(window).on('load scroll resize',() => {
+			const nav = $('.l_header_nav'),
+				scroll = $(window).scrollTop(),
+				headerHeight = $('.l_header').outerHeight();
+
+			//ナビゲーションの位置までスクロールしたか判定
+			const content = $('.m_sec');
+
+			//コンテンツごとに繰り返し処理
+			content.each(function(i,e){
+				//コンテンツの開始位置を取得
+				const target = $(this).offset().top,
+					//コンテンツの終了位置を取得
+					targetPosition = target + $(this).innerHeight(),
+					//コンテンツのID属性を取得
+					id = $(e).attr('id');
+
+				//該当するコンテンツまでスクロールしているか判定　＆＆ 該当するコンテンツを通り過ぎたか判定
+				if(scroll >= target && scroll < targetPosition){
+					//該当するhref属性にクラスを付与
+					nav.find('a[href^="#' + id  + '"]').addClass('is_current');
+				}else{
+					//該当しないhref属性はクラスを削除
+					nav.find('a[href^="#' + id  + '"]').removeClass('is_current');
+				}
+			});
 		});
 	</script>
 </body>
