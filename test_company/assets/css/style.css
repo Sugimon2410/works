@@ -1172,7 +1172,7 @@ dl > dd {
     font-size: 1.2rem;
   }
   .l_kv_ttl {
-    font-size: 2.8rem;
+    font-size: 3.6rem;
   }
   .l_kv_inner {
     flex-flow: column;
@@ -1181,6 +1181,9 @@ dl > dd {
   }
   .l_kv_txt {
     width: auto;
+  }
+  .l_content.is_window .company {
+    width: 100%;
   }
   .company {
     margin-left: 0;
