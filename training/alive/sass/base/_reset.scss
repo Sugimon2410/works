@@ -1,0 +1,101 @@
+@use "../variable/" as v;
+
+/* reset
+--------------------------------------------------*/
+html, body, h1, h2, h3, h4, ul, ol, dl, li, dt, dd, p, div, span, img, svg, a, table, tr, th, td, figure {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+body, p {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    @include v.mq () {
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+}
+
+h1, h2, h3, h4 {
+    line-height: 1.2;
+    @include v.mq () {
+        line-height: 1.4;
+    }
+}
+
+article, header, footer, aside, figure, figcaption, nav, section {
+    display: block;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    opacity: 1;
+    transition:.3s;
+    cursor: pointer;
+    // white-space: nowrap;//safari//お知らせで不具合出たためコメントアウト
+    word-break: break-all;
+}
+img {
+    display: block;
+    border-style: none;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+:focus {
+    border-style: none;
+    outline:none;
+}
+input,
+button,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font: inherit;
+  outline: none;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  display: none;
+}
+
+input[type='submit'],
+input[type='button'],
+label,
+button,
+select {
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
+article{
+  overflow-wrap: break-word;
+  overflow: hidden;
+}

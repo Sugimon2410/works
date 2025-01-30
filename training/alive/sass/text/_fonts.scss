@@ -1,0 +1,61 @@
+@use "../variable/" as v;
+@use "color" as c;
+
+/* フォントの定義
+--------------------------------------------------*/
+html{
+    font-size: 10px;
+}
+body, ul, ol, dl, li, dt, dd, p, div, span, img, svg, a, table, tr, th, td, figure ,select,input,textarea{
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    color:#000;
+    @include v.mq-down{
+        font-size: 14px;
+    }
+}
+h1, h2, h3, h4 {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    color:#000;
+}
+.zen-kaku-gothic-new-regular {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.zen-kaku-gothic-new-medium {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.zen-kaku-gothic-new-bold {
+font-family: "Zen Kaku Gothic New", sans-serif;
+font-weight: 700;
+font-style: normal;
+}
+.en_700 {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.en_900 {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+

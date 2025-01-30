@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!--GAタグ設置-->
+
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+    <title>Alive STEM School</title>
+    <meta name="description" content="">
+
+    <!-- style -->
+    <link rel="stylesheet" type="text/css" href="css/stem.css">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<header class="stem_header">
+    <!-- PC -->
+    <nav class="pc_nav">
+        <h1>
+            <a href="stem.html"><img src="img/stem/logo.svg" alt="Alive インターナショナルスクール イングリッシュスクール"></a>
+        </h1>
+        <div class="menu">
+            <ul class="txt_menu">
+                <li><a href="stem.html">STEM TOPへ</a></li>
+                <li><a href="#philosophy">理念</a></li>
+                <li><a href="#classes_fees">クラス紹介</a></li>
+                <li><a href="teacher.html">先生紹介</a></li>
+                <li><a href="instagram" class="insta_link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="insta_icon">
+                        <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                </a></li>
+            </ul>
+            <ul class="btn_menu">
+                <li><a href="#" class="btn">体験申し込み</a></li>
+                <li><a href="#" class="btn">資料請求<br>お問い合わせ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ▼ SP ▼ -->
+    <div id="nav_head">
+        <!-- <h1 class="header_logo_sp">
+            <a href="stem.html"><img src="img/stem/logo.svg" alt="Alive インターナショナルスクール イングリッシュスクール"></a>
+        </h1> -->
+        <div class="nav_btn_wrap">
+            <div class="openbtn"><span></span><span></span><span></span></div>
+        </div>
+    </div>
+    <nav id="nav_sp">
+        <ul class="txt_menu">
+            <li>
+                <a href="stem.html" class="sp_link">STEM TOPへ</a>
+            </li>
+            <li>
+                <a href="#philosophy" class="sp_link">理念</a>
+            </li>
+            <li>
+                <a href="#classes_fees" class="sp_link">クラス紹介</a>
+            </li>
+            <li>
+                <a href="teacher.html" class="sp_link">先生紹介</a>
+            </li>
+            <li><a href="instagram" class="insta_link sp_link">instagram
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="insta_icon">
+                    <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+            </a></li>
+        </ul>
+        <ul class="btn_menu">
+            <li><a href="#" class="btn">体験申し込み</a></li>
+            <li><a href="#" class="btn">資料請求<br>お問い合わせ</a></li>
+        </ul>
+    </nav>
+    <!-- ▲ SP ▲ -->
+</header>
+
+<body>
+    <!-- ----------ここからWP---------- -->
+    <div class="page_stem_wrapper">
+        <article class="page_stem" id="container">
+
+            <!-- ----------　▼キービジュアル▼　------------>
+            <section class="sec_kv">
+                <div class="illust_area">
+                    <img src="img/stem/kv.jpg" usemap="#ImageMap" alt="ALIVE STEM SCHOOL ロードマップ" />
+                    <map name="ImageMap">
+                        <area shape="rect" coords="357,920,718,1027" href="#scratch_programming" alt="スクラッチ・プログラミング" />
+                        <area shape="rect" coords="1061,802,1371,909" href="#advanced_class" alt="アドバンスプログラミングミックスクラス" />
+                        <area shape="rect" coords="287,1456,602,1561" href="#first_stem_lab" alt="マイ・ファーストステムラボクラス" />
+                        <area shape="rect" coords="991,1446,1295,1550" href="#pbl_stem" alt="PBL-STEMクラス" />
+                        <area shape="rect" coords="1579,1353,1933,1506" href="#class_3d" alt="3D Design & Printingクラス" />
+                    </map>
+                </div>
+                <div class="band"><img src="img/stem/megaphone.svg" alt=""><p class="txt">Alive STEM SCHOOLロードマップ！ 各クラスをクリックすると、概要にリンクするよ</p></div>
+            </section>
+            <!-- ----------　▲キービジュアル▲　------------>
+
+            <!-- ----------　▼生徒の写真エリア▼　------------>
+            <section class="sec_student_ph">
+                <div class="student_ph01">
+                    <img src="img/stem/student_ph01.jpg" alt="生徒の写真">
+                </div>
+                <div class="student_ph02">
+                    <img src="img/stem/student_ph02.jpg" alt="生徒の写真">
+                </div>
+            </section>
+            <!-- ----------　▲生徒の写真エリア▲　------------>
+
+            <!-- ----------　▼理念・概要▼　------------>
+            <hr id="philosophy">
+            <section class="sec_philosophy">
+                <div class="philosophy_img_wrap">
+                    <img src="img/stem/philosophy_img.png" alt="テクノロジーで世界を変える">
+                </div>
+            </section>
+            <!-- ----------　▲理念・概要▲　------------>
+
+            <!-- ----------　▼未来を変えるチカラは、自身の中にある！▼　------------>
+            <section class="sec_whats_stem">
+                <div class="title_wrap">
+                    <img src="img/stem/whats_stem.png" alt="未来を変えるチカラは、自身の中にある！" class="sp_none">
+                    <img src="img/stem/whats_stem_sp.png" alt="未来を変えるチカラは、自身の中にある！" class="pc_none">
+                </div>
+                <p class="txt">Alive STEM SCHOOLは、楽しく学びながら「ひらめき」や「やってみたい!」を育てる場所です。<br>最新のテクノロジーと探究型学習による挑戦が、子どもたちの創造性・問題解決力・論理的思考力を広げます!<br>
+                <span class="note">※STEM：科学・技術・工学・数学を学ぶプログラム</span>
+                </p>
+            </section>
+            <!-- ----------　▲未来を変えるチカラは、自身の中にある！▲　------------>
+
+            <!-- ----------　▼ALIVE STEM SCHOOLならではの特徴▼　------------>
+            <section class="sec_features">
+                <div class="title_wrap">
+                    <img src="img/stem/features.png" alt="ALIVE STEM SCHOOLならではの特徴" class="sp_none">
+                    <img src="img/stem/features_ttl_sp.png" alt="ALIVE STEM SCHOOLならではの特徴" class="pc_none">
+                </div>
+                <ul>
+                    <li>
+                        <p class="title">たくさん話して考えがどんどん広がる！</p>
+                        <p class="small">みんなで「なんで？」「どうして？」を見つけます。<br>友だちとのディスカッションで、自分の考えを表現し、視野を広げます。</p>
+                    </li>
+                    <li>
+                        <p class="title">失敗は成長のチャンス！</p>
+                        <p class="small">失敗しても大丈夫。トライ＆エラーで失敗を恐れないマインドをつくります。</p>
+                    </li>
+                    <li>
+                        <p class="title">専門家が設計した多彩なカリキュラム</p>
+                        <p class="small">ロボット作り、プログラミング、実験－多岐にわたってチャレンジできる理工系プロが考えたカリキュラムで、初心者から上級者まで有意義に学ぶことができます。</p>
+                    </li>
+                    <li>
+                        <p class="title">理工系外国人の先生によるリアルな科学の学び</p>
+                        <p class="small">世界中の理工系の専門家が、教科書にはないワクワクする科学のリアルな世界を実現します。</p>
+                    </li>
+                </ul>
+                <p class="large_catch">今すぐ、未来への冒険に<br class="pc_none">出発しよう！</p>
+                <div class="btn_list">
+                    <div class="btn"><a href="#"><span>プログラムを見る</span></a></div>
+                    <div class="btn"><a href="#"><span>無料体験の申し込み</span></a></div>
+                </div>
+            </section>
+            <!-- ----------　▲ALIVE STEM SCHOOLならではの特徴▲　------------>
+
+            <!-- ----------　▼クラス紹介▼　------------>
+            <hr id="classes_fees">
+            <section class="sec_classes_fees">
+                <div class="title_wrap">
+                    <img src="img/stem/classes_fees.png" alt="classes_fees" class="sp_none">
+                    <img src="img/stem/classes_fees_sp.png" alt="classes_fees" class="pc_none">
+                    <p class="black">アライブのSTEM SCHOOLの6つのコース</p>
+                </div>
+
+                <!-- マイ・ファーストステムラボクラス -->
+                <hr id="first_stem_lab">
+                <div class="class_block first_stem_lab">
+                    <div class="class_name">
+                        <img src="img/stem/class_ttl_01.png" alt="マイ・ファーストステムラボクラス">
+                    </div>
+                    <div class="intro">
+                        <div class="txt_wrap">
+                            <p class="txt"><span class="strong">探究心と好奇心を刺激する、はじめてのサイエンス体験！</span><br>楽しい実験を通して、子どもたちの「なぜ？どうして？」を引き出します。英語にも自然に触れられるので、サイエンスも英語もこれから始めたい初心者や初中級の方にぴったりです！</p>
+                            <p class="point_txt">簡単なサイエンスに挑戦</p>
+                            <p class="point_txt">毎回ワクワクする実験がいっぱい！</p>
+                            <p class="point_txt">見て、触って、学ぶ体験型クラス</p>
+                        </div>
+                        <img src="img/stem/mfsl_illust.png" alt="マイ・ファーストステムラボクラス"  class="mfsl_illust">
+                    </div>
+
+                    <div class="youtube_block">
+                        <div class="small_title">Youtube</div>
+                        <div class="btn"><a href="#"><span>アライブYoutubeチャンネル</span></a></div>
+                        <div class="movie_area">
+                            <div class="movie_wrap">
+                                <iframe src="https://www.youtube.com/embed/nLXVEQu4GsU?si=j-mfj9Jgplgpo3rQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <div class="movie_wrap">
+                                <iframe src="https://www.youtube.com/embed/nLXVEQu4GsU?si=j-mfj9Jgplgpo3rQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="voice_block">
+                        <div class="voice_block_inner">
+                            <div class="small_title_center"><div class="small_title">Voice</div></div>
+                            <ul>
+                                <li>
+                                    <p class="name">N・A様　<br class="pc_none">お子様の年齢 2歳4ヶ月</p>
+                                    <p>【仮】「レッスンを受けて１年になりますが、最近では単語を聞いて理解しているようです。<br>
+                                        英語の発音が驚くほどきれいで満足しています。」</p>
+                                </li>
+                                <li>
+                                    <p class="name">Y・A様　<br class="pc_none">お子様の年齢 0歳8ヶ月</p>
+                                    <p>【仮】「英語に慣れ親しんでほしくて、生後6ヵ月から通っています。<br>
+                                        レッスンを受けて２ヵ月になりますが、スクールにも英語にも慣れてきたようです。先生が大好きでとても楽しそうにしています。」</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="fee_block">
+                        <div class="small_title_center"><div class="small_title">概要</div></div>
+                        <ul class="card_list">
+                            <li>
+                                <img src="img/stem/fee_01_02.jpg" alt="推奨学年小学1~3年生">
+                            </li>
+                            <li>
+                                <img src="img/stem/fee_01_03.jpg" alt="レッスン回数月2回/1回50分">
+                            </li>
+                            <li>
+                                <img src="img/stem/fee_01_04.jpg" alt="推奨英語レベル初級〜初中級">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="btn btn_application"><a href="#"><span>無料体験の申し込み</span></a></div>
+                </div>
+
+                <!-- PBL-STEMクラス -->
+                <hr id="pbl_stem">
+                <div class="class_block pbl_stem">
+                    <div class="class_name">
+                        <img src="img/stem/class_ttl_02.png" alt="PBL-STEMクラス">
+                    </div>
+                    <div class="intro">
+                        <div class="txt_wrap">
+                            <p class="txt"><span class="strong">考える力と問題解決力、ディスカションをしながらスキルを磨くSTEM学習!</span><br>PBL（Project-Based Learning）形式で、実験や制作、ディスカッションを通じて、知識とスキルをバランスよく身につけます。英語やサイエンスの中級以上の方におすすめです。</p>
+                            <p class="point_txt">実社会の課題に挑戦</p>
+                            <p class="point_txt">チームでのディスカッションやプレゼンテーション</p>
+                            <p class="point_txt">創造力と論理的思考力を養成</p>
+                        </div>
+                        <img src="img/stem/pbl_stem_illust.png" alt="PBL-STEMクラス"  class="pbl_illust">
+                    </div>
+
+                    <div class="photo_block">
+                        <div class="ph">
+                            <img src="img/stem/pbl_stem_ph01.jpg" alt="PBL-STEMクラス">
+                        </div>
+                        <div class="ph">
+                            <img src="img/stem/pbl_stem_ph02.jpg" alt="PBL-STEMクラス">
+                        </div>
+                    </div>
+
+                    <div class="voice_block">
+                        <div class="voice_block_inner">
+                            <div class="small_title_center"><div class="small_title">Voice</div></div>
+                            <ul>
+                                <li>
+                                    <p class="name">N・A様　<br class="pc_none">お子様の年齢 2歳4ヶ月</p>
+                                    <p>【仮】「レッスンを受けて１年になりますが、最近では単語を聞いて理解しているようです。<br>
+                                        英語の発音が驚くほどきれいで満足しています。」</p>
+                                </li>
+                                <li>
+                                    <p class="name">Y・A様　<br class="pc_none">お子様の年齢 0歳8ヶ月</p>
+                                    <p>【仮】「英語に慣れ親しんでほしくて、生後6ヵ月から通っています。<br>
+                                        レッスンを受けて２ヵ月になりますが、スクールにも英語にも慣れてきたようです。先生が大好きでとても楽しそうにしています。」</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="fee_block">
+                        <div class="small_title_center"><div class="small_title">概要</div></div>
+                        <ul class="card_list">
+                            <li>
+                                <img src="img/stem/fee_02_02.jpg" alt="推奨学年小学3~6年生中学生">
+                            </li>
+                            <li>
+                                <img src="img/stem/fee_02_03.jpg" alt="レッスン回数週1回/1回100分">
+                            </li>
+                            <li>
+                                <img src="img/stem/fee_02_04.jpg" alt="推奨英語レベル中級〜上級">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="btn btn_application"><a href="#"><span>無料体験の申し込み</span></a></div>
+                </div>
+
+                <!-- スクラッチ・プログラミング -->
+                <hr id="scratch_programming">
+                <div class="class_block scratch_programming">
+                    <div class="class_name">
+                        <img src="img/stem/class_ttl_03.png" alt="スクラッチ・プログラミング">
+                    </div>
+                    <div class="intro">
+                        <div class="txt_wrap">
+                            <p class="txt"><span class="strong">ゲームやアニメを自分で作ろう!</span><br>プログラミング言語Scratchを使って、ゲームやアニメーションを制作します。日本語対応で、初心者でも安心して始められます。</p>
+                            <p class="point_txt">プログラミングの基礎を習得</p>
+                            <p class="point_txt">楽しく遊び感覚のビジュアルプログラミング</p>
+                            <p class="point_txt">コーディングで論理的思考力を育成</p>
+                        </div>
+                        <img src="img/stem/scratch_illust.png" alt="スクラッチ・プログラミング"  class="scratch_illust">
+                    </div>
+
+                    <div class="photo_block">
+                        <div class="ph">
+                            <img src="img/stem/scratch_ph01.jpg" alt="スクラッチ・プログラミング">
+                        </div>
+                        <div class="ph">
+                            <img src="img/stem/scratch_ph02.jpg" alt="スクラッチ・プログラミング">
+                        </div>
+                    </div>
+
+                    <div class="voice_block">
+                        <div class="voice_block_inner">
+                            <div class="small_title_center"><div class="small_title">Voice</div></div>
+                            <ul>
+                                <li>
+                                    <p class="name">N・A様　<br class="pc_none">お子様の年齢 2歳4ヶ月</p>
+                                    <p>【仮】「レッスンを受けて１年になりますが、最近では単語を聞いて理解しているようです。<br>
+                                        英語の発音が驚くほどきれいで満足しています。」</p>
+                                </li>
+                                <li>
+                                    <p class="name">Y・A様　<br class="pc_none">お子様の年齢 0歳8ヶ月</p>
+                                    <p>【仮】「英語に慣れ親しんでほしくて、生後6ヵ月から通っています。<br>
+                                        レッスンを受けて２ヵ月になりますが、スクールにも英語にも慣れてきたようです。先生が大好きでとても楽しそうにしています。」</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="fee_block">
+                        <div class="small_title_center"><div class="small_title">概要</div></div>
+                        <ul class="card_list">
+                            <li>
+                                <img src="img/stem/fee_03_02.jpg" alt="推奨学年小学3~6年生中学生">
+                            </li>
+                            <li>
+                                <img src="img/stem/fee_03_03.jpg" alt="レッスン回数月2回/1回60分">
+                            </li>
+                            <li>
+                                <img src="img/stem/fee_03_04.jpg" alt="推奨英語レベル1年目/初級 2年目/初中級">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="btn btn_application"><a href="#"><span>無料体験の申し込み</span></a></div>
+                </div>
+
+                <!-- アドバンスプログラムミックスクラス -->
+                <hr id="advanced_class">
+                <div class="class_block advanced_class">
+                    <div class="class_name">
+                        <img src="img/stem/class_ttl_04.png" alt="アドバンスプログラムミックスクラス">
+                    </div>
+                    <div class="intro">
+                        <div class="txt_wrap">
+                            <p class="txt"><span class="strong">これまで習ったSTEMの知識を使って本格的な問題解決に挑戦</span><br>PBL STEMで学んだ工学的思考と、Scratch (スクラッチ)で習得したプログラミングスキルを組み合わせ、レゴマインドストームやPython(パイソン)なども活用して、より高度なシステム開発に挑戦します。</p>
+                            <p class="point_txt">レゴマインドストームやPython(パイソン)に挑戦</p>
+                            <p class="point_txt">複雑な課題をチームで解決するスキルを習得</p>
+                            <p class="point_txt">これまでの知識や応用力で創造性を育成</p>
+                        </div>
+                        <img src="img/stem/advanced_illust.png" alt="スクラッチ・プログラミング"  class="advanced_illust">
+                    </div>
+
+                    <div class="photo_block">
+                        <div class="ph">
+                            <img src="img/stem/advanced_ph01.jpg" alt="スクラッチ・プログラミング">
+                        </div>
+                        <div class="ph">
+                            <img src="img/stem/advanced_ph02.jpg" alt="スクラッチ・プログラミング">
+                        </div>
+                    </div>
+
+                    <div class="voice_block">
+                        <div class="voice_block_inner">
+                            <div class="small_title_center"><div class="small_title">Voice</div></div>
+                            <ul>
+                                <li>
+                                    <p class="name">N・A様　<br class="pc_none">お子様の年齢 2歳4ヶ月</p>
+                                    <p>【仮】「レッスンを受けて１年になりますが、最近では単語を聞いて理解しているようです。<br>
+                                        英語の発音が驚くほどきれいで満足しています。」</p>
+                                </li>
+                                <li>
+                                    <p class="name">Y・A様　<br class="pc_none">お子様の年齢 0歳8ヶ月</p>
+                                    <p>【仮】「英語に慣れ親しんでほしくて、生後6ヵ月から通っています。<br>
+                                        レッスンを受けて２ヵ月になりますが、スクールにも英語にも慣れてきたようです。先生が大好きでとても楽しそうにしています。」</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="fee_block">
+                        <div class="small_title_center"><div class="small_title">概要</div></div>
+                        <ul class="card_list">
+                            <li>
+                                <img src="img/stem/fee_04_02.jpg" alt="推奨学年小学4~6年生中学生">
+                            </li>
+                            <li>
+                                <img src="img/stem/fee_04_03.jpg" alt="レッスン回数月2回/1回60分">
+                            </li>
+                            <li>
+                                <img src="img/stem/fee_04_04.jpg" alt="推奨英語中級〜上級">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="btn btn_application"><a href="#"><span>無料体験の申し込み</span></a></div>
+                </div>
+
+                <!-- 3D design & Printing クラス -->
+                <hr id="class_3d">
+                <div class="class_block class_3d">
+                    <div class="class_name">
+                        <img src="img/stem/class_ttl_05.png" alt="3D design & Printing クラス">
+                    </div>
+                    <div class="intro">
+                        <div class="txt_wrap">
+                            <p class="txt"><span class="strong">アイデアをカタチに!3Dものづくり体験</span><br>CADと3Dプリンターの基礎を学び、ThinkerCADを使って自分のデザインを実際にプリントします。ものづくりの楽しさを実感できるコースです!</p>
+                            <p class="point_txt">3Dプリンターの安全な使い方を習得</p>
+                            <p class="point_txt">ThinkerCADで設計に挑戦</p>
+                            <p class="point_txt">実際に作品を3Dプリントしてアイディアをカタチに!</p>
+                        </div>
+                        <img src="img/stem/3d_illust.png" alt="3D design & Printing クラス"  class="class_3d_illust">
+                    </div>
+
+                    <div class="photo_block">
+                        <div class="ph">
+                            <img src="img/stem/3d_ph01.jpg" alt="3D design & Printing クラス">
+                        </div>
+                        <div class="ph">
+                            <img src="img/stem/3d_ph02.jpg" alt="3D design & Printing クラス">
+                        </div>
+                    </div>
+
+                    <div class="voice_block">
+                        <div class="voice_block_inner">
+                            <div class="small_title_center"><div class="small_title">Voice</div></div>
+                            <ul>
+                                <li>
+                                    <p class="name">N・A様　<br class="pc_none">お子様の年齢 2歳4ヶ月</p>
+                                    <p>【仮】「レッスンを受けて１年になりますが、最近では単語を聞いて理解しているようです。<br>
+                                        英語の発音が驚くほどきれいで満足しています。」</p>
+                                </li>
+                                <li>
+                                    <p class="name">Y・A様　<br class="pc_none">お子様の年齢 0歳8ヶ月</p>
+                                    <p>【仮】「英語に慣れ親しんでほしくて、生後6ヵ月から通っています。<br>
+                                        レッスンを受けて２ヵ月になりますが、スクールにも英語にも慣れてきたようです。先生が大好きでとても楽しそうにしています。」</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="fee_block">
+                        <div class="small_title_center"><div class="small_title">概要</div></div>
+                        <ul class="card_list">
+                            <li>
+                                <img src="img/stem/fee_05_02.jpg" alt="推奨学年小学4~6年生中学生">
+                            </li>
+                            <li>
+                                <img src="img/stem/fee_05_03.jpg" alt="レッスン回数月2回/1回60分">
+                            </li>
+                            <li>
+                                <img src="img/stem/fee_05_04.jpg" alt="推奨英語中上級">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="btn btn_application"><a href="#"><span>無料体験の申し込み</span></a></div>
+                </div>
+
+                <!-- エレクトロニック サーキット プログラミング クラス -->
+                <hr id="class_electronic">
+                <div class="class_block class_electronic">
+                    <div class="class_name">
+                        <img src="img/stem/class_ttl_06.png" alt="エレクトロニック サーキット プログラミング クラス">
+                    </div>
+                    <div class="intro">
+                        <div class="txt_wrap">
+                            <p class="txt">プログラミング・電子回路いじりが好きな方にぴったりのクラス。TinkerCAD を使用して回路をシミュレートし、Arduino スターターキットを使用して作成した電子回路を、CTTとスクラッチを使ってプログラミングします。</p>
+                        </div>
+                        <img src="img/stem/3d_illust.png" alt="3D design & Printing クラス"  class="class_3d_illust">
+                    </div>
+
+                    <div class="photo_block">
+                        <div class="ph">
+                            <img src="img/stem/electronic_ph01.jpg" alt="3D design & Printing クラス">
+                        </div>
+                        <div class="ph">
+                            <img src="img/stem/electronic_ph02.jpg" alt="3D design & Printing クラス">
+                        </div>
+                    </div>
+
+                    <div class="voice_block">
+                        <div class="voice_block_inner">
+                            <div class="small_title_center"><div class="small_title">Voice</div></div>
+                            <ul>
+                                <li>
+                                    <p class="name">N・A様　<br class="pc_none">お子様の年齢 2歳4ヶ月</p>
+                                    <p>【仮】「レッスンを受けて１年になりますが、最近では単語を聞いて理解しているようです。<br>
+                                        英語の発音が驚くほどきれいで満足しています。」</p>
+                                </li>
+                                <li>
+                                    <p class="name">Y・A様　<br class="pc_none">お子様の年齢 0歳8ヶ月</p>
+                                    <p>【仮】「英語に慣れ親しんでほしくて、生後6ヵ月から通っています。<br>
+                                        レッスンを受けて２ヵ月になりますが、スクールにも英語にも慣れてきたようです。先生が大好きでとても楽しそうにしています。」</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="fee_block">
+                        <div class="small_title_center"><div class="small_title">概要</div></div>
+                        <ul class="card_list">
+                            <li>
+                                <img src="img/stem/fee_06_02.jpg" alt="推奨学年小学4~6年生中学生">
+                            </li>
+                            <li>
+                                <img src="img/stem/fee_06_03.jpg" alt="レッスン回数月2回/1回60分">
+                            </li>
+                            <li>
+                                <img src="img/stem/fee_06_04.jpg" alt="推奨英語中上級">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="btn btn_application"><a href="#"><span>無料体験の申し込み</span></a></div>
+                </div>
+
+                <p class="stem_note">※STEMとは、理工系の総称のプログラムです。</p>
+
+            </section>
+            <!-- ----------　▲クラス紹介▲　------------>
+
+            <section class="sec_contact">
+                <div class="inner">
+                    <div class="title_wrap">
+                        <img src="img/stem/contact.png" alt="CONTACT">
+                        <p class="black">お問い合わせ</p>
+                    </div>
+                    <p class="txt">STEM SCHOOLについては<br class="pc_none">下記よりお気軽にお問い合わせください</p>
+                    <div class="btn btn_page_link"><a href="teacher.html"><span>STEMスクールの先生を見る</span></a></div>
+                    <div class="btn_list">
+                        <div class="btn"><a href="#"><span>無料体験申し込み</span></a></div>
+                        <div class="btn"><a href="#"><span>資料請求・お問い合わせ</span></a></div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="footer_wrap">
+                <footer>
+                    <div class="footer_logo">
+                        <img src="img/stem/footer_logo.svg" alt="Alive インターナショナルスクール イングリッシュスクール">
+                    </div>
+                    <nav class="footer_nav">
+                        <ul>
+                            <li><a href="#">採用情報</a></li>
+                            <li><a href="#">プライバシーポリシー</a></li>
+                            <li><a href="#">お問い合わせ</a></li>
+                        </ul>
+                    </nav>
+                    <small class="copy">&copy;All Rights Reserved.</small>
+                </footer>
+            </div>
+
+
+        </article>
+    </div>
+    <!-- ----------ここまでWP---------- -->
+    <!-- jqueryバージョン設定 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- script読み込み -->
+    <script type="text/javascript" src="js/stem.js"></script>
+    <script src="https://kit.fontawesome.com/4b9ea2b926.js" crossorigin="anonymous"></script>
+
+    <!-- クリッカブルマップ -->
+    <script src="https://unpkg.com/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
+    <script>imageMapResize();</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="33" viewBox="0 0 38 33">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #000;
+        stroke-linejoin: round;
+        stroke-width: 1px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="shippo.svg" class="cls-1" d="M699.946,3206.14a3,3,0,0,1,5.107,0l13.126,21.29a3,3,0,0,1-2.554,4.57H689.374a3,3,0,0,1-2.553-4.57Z" transform="translate(-683.5 -3201.5)"/>
+</svg>

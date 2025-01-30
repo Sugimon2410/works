@@ -1,0 +1,233 @@
+@use "../variable" as v;
+@use "../text" as t;
+
+
+/* 流用パーツ
+--------------------------------------------------*/
+article{
+    word-break: break-all;
+}
+
+// 改行・非表示
+  .lg_none{
+    display: none;
+    @include v.lg-down() {
+      display: block;
+    }
+  }
+
+.sp_none{
+    display: block;
+    @include v.mq-down() {
+      display: none;
+    }
+  }
+.sp_none_space{
+    display: inline-block;
+    @include v.mq-down() {
+    display: none;
+    }
+}
+  .pc_none{
+    display: none;
+    @include v.mq-down() {
+      display: block;
+    }
+  }
+
+.pc-view {
+    display: none;
+    @include v.mq() {
+        display: block;
+    }
+    &.blank {
+        @media screen and (min-width: 768px) and (max-width: 850px) {
+            display: none;
+        }
+    }
+}
+.sp-view {
+    display: block;
+    @include v.mq() {
+        display: none;
+    }
+}
+.pc-nav-view {
+    display: block;
+    @include v.lg-down() {
+        display: none;
+    }
+}
+.lg_br{
+    display: none;
+    @include v.lg-down() {
+        display: block;
+    }
+    @include v.mq-down() {
+        display: none;
+    }
+}
+.sm_br{
+    display: none;
+    @include v.sm-down() {
+        display: block;
+    }
+}
+
+// 三角形あしらい----------
+// 下向き
+.triangle_wrap{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+  .triangle,
+  .triangle::before,
+  .triangle::after{
+  width: 6px;
+  height: 6px;
+  background: t.$red;
+  display: block;
+  }
+
+  .triangle::before,
+  .triangle::after {
+  content: "";
+  position: absolute;
+  }
+
+  .triangle {
+  position: relative;
+  border-top-left-radius: 30%;
+  transform: rotate(30deg) skewY(30deg) scaleX(.86666);
+  }
+
+  .triangle::before {
+  border-top-right-radius: 30%;
+  transform: skewX(-45deg) translateX(50%);
+  }
+
+  .triangle::after {
+  border-bottom-left-radius: 30%;
+  transform: skewY(-45deg) translateY(50%);
+  }
+}
+
+// 右向き
+.triangle_r_wrap{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  .triangle,
+  .triangle::before,
+  .triangle::after{
+  width: 6px;
+  height: 6px;
+  background: t.$red;
+  display: block;
+  }
+
+  .triangle::before,
+  .triangle::after {
+  content: "";
+  position: absolute;
+  }
+
+  .triangle {
+  position: relative;
+  border-top-left-radius: 30%;
+  transform: rotate(30deg) skewY(30deg) scaleX(.86666);
+  }
+
+  .triangle::before {
+  border-top-right-radius: 30%;
+  transform: skewX(-45deg) translateX(50%);
+  }
+
+  .triangle::after {
+  border-bottom-left-radius: 30%;
+  transform: skewY(-45deg) translateY(50%);
+  }
+}
+
+// 右向き
+.triangle_top_wrap{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  .triangle,
+  .triangle::before,
+  .triangle::after{
+  width: 20px;
+  height: 20px;
+  background: t.$red;
+  display: block;
+  }
+
+  .triangle::before,
+  .triangle::after {
+  content: "";
+  position: absolute;
+  }
+
+  .triangle {
+  position: relative;
+  border-top-left-radius: 30%;
+  transform: rotate(30deg) skewY(30deg) scaleX(.86666);
+  }
+
+  .triangle::before {
+  border-top-right-radius: 30%;
+  transform: skewX(-45deg) translateX(50%);
+  }
+
+  .triangle::after {
+  border-bottom-left-radius: 30%;
+  transform: skewY(-45deg) translateY(50%);
+  }
+}
+
+// ボタン　----------
+.btn{
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    width: 296px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: t.$red;
+    border: 2px solid t.$red;
+    border-radius: 30px;
+    position: relative;
+    transition: .3s;
+    &::after{
+        position: absolute;
+        content: "";
+        background-image: url(../img/common/trine.png);
+        width: 9px;
+        height: 11px;
+        background-size: cover;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 15px;
+        transition: .3s;
+    }
+    &:hover{
+        background-color: t.$red;
+        color: #fff;
+        &::after{
+            background-image: url(../img/common/trine_w.png);
+        }
+    }
+}
+.btn_center{
+  text-align: center;
+  .btn{
+    display: inline-flex;
+  }
+}

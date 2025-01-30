@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!--GAタグ設置-->
+
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+    <title>Alive STEM School</title>
+    <meta name="description" content="">
+
+    <!-- style -->
+    <link rel="stylesheet" type="text/css" href="css/stem.css">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<header class="stem_header">
+    <!-- PC -->
+    <nav class="pc_nav">
+        <h1>
+            <a href="stem.html"><img src="img/stem/logo.svg" alt="Alive インターナショナルスクール イングリッシュスクール"></a>
+        </h1>
+        <div class="menu">
+            <ul class="txt_menu">
+                <li><a href="stem.html">STEM TOPへ</a></li>
+                <li><a href="stem.html#philosophy">理念</a></li>
+                <li><a href="stem.html#classes_fees">クラス・料金</a></li>
+                <li><a href="teacher.html">先生紹介</a></li>
+                <li><a href="instagram" class="insta_link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="insta_icon">
+                        <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                </a></li>
+            </ul>
+            <ul class="btn_menu">
+                <li><a href="#" class="btn">体験申し込み</a></li>
+                <li><a href="#" class="btn">資料請求<br>お問い合わせ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ▼ SP ▼ -->
+    <div id="nav_head">
+        <!-- <h1 class="header_logo_sp">
+            <a href="stem.html"><img src="img/stem/logo.svg" alt="Alive インターナショナルスクール イングリッシュスクール"></a>
+        </h1> -->
+        <div class="nav_btn_wrap">
+            <div class="openbtn"><span></span><span></span><span></span></div>
+        </div>
+    </div>
+    <nav id="nav_sp">
+        <ul class="txt_menu">
+            <li>
+                <a href="stem.html" class="sp_link">STEM TOPへ</a>
+            </li>
+            <li>
+                <a href="stem.html#philosophy" class="sp_link">理念</a>
+            </li>
+            <li>
+                <a href="stem.html#classes_fees" class="sp_link">クラス・料金</a>
+            </li>
+            <li>
+                <a href="teacher.html" class="sp_link">先生紹介</a>
+            </li>
+            <li><a href="instagram" class="insta_link sp_link">instagram
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="insta_icon">
+                    <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+            </a></li>
+        </ul>
+        <ul class="btn_menu">
+            <li><a href="#" class="btn">体験申し込み</a></li>
+            <li><a href="#" class="btn">資料請求<br>お問い合わせ</a></li>
+        </ul>
+    </nav>
+    <!-- ▲ SP ▲ -->
+</header>
+
+<body>
+    <!-- ----------ここからWP---------- -->
+    <div class="page_stem_wrapper">
+        <article class="page_stem_teacher" id="container">
+
+            <!-- ----------　▼キービジュアル▼　------------>
+            <section class="sec_kv">
+                <div class="title_wrap">
+                    <img src="img/stem/kv_teacher.png" alt="TEACHERS">
+                    <p class="black">STEMスクールの先生紹介</p>
+                </div>
+            </section>
+            <!-- ----------　▲キービジュアル▲　------------>
+
+            <!-- ----------　▼説明▼　------------>
+            <section class="sec_explanation">
+                <div class="large_txt">世界のプロフェッショナルから学ぶ、<br>アライブで培う未来を創る力</div>
+                <p class="txt">理工系の専門知識と国際教養を持つプロフェッショナルなアライブの外国人講師だからこそ伝えられる「本物の知識」と「実践力」。<br>多様な視点に触れることで、創造力や問題解決力が身につき、子どもたちは未来のイノベーターとして成長していきます。</p>
+                <div class="large_txt merit">理工系のプロから学ぶ3つのメリット</div>
+                <div class="merit_list">
+                    <p class="merit_title">1.実践的な知識とスキル</p>
+                    <p class="merit_txt">理論に加え、リアルな知識や最先端技術に触れ、より深い学びへ</p>
+                </div>
+                <div class="merit_list">
+                    <p class="merit_title">2.英語で考え、解決する力</p>
+                    <p class="merit_txt">「英語を学ぶ」だけでなく、英語を使って問題解決に挑戦</p>
+                </div>
+                <div class="merit_list">
+                    <p class="merit_title">3.多様な視点と柔軟な思考</p>
+                    <p class="merit_txt">異なる文化・価値観を持つ講師によりグローバルな発想力を育成</p>
+                </div>
+            </section>
+            <!-- ----------　▲説明▲　------------>
+
+            <!-- ----------　▼先生紹介▼　------------>
+            <section class="sec_introduction">
+                <div class="title_wrap">
+                    <img src="img/stem/teachers.png" alt="teachers">
+                    <p class="black">STEMスクールの先生紹介</p>
+                </div>
+
+                <ul class="teacher_list">
+
+                    <!-- プラム -->
+                    <li>
+                        <div class="profile">
+                            <div class="img_wrap">
+                                <img src="img/stem/member_ph01.jpg" alt="写真">
+                            </div>
+                            <div class="profile_txt">
+                                <dl>
+                                    <dt>ニックネーム</dt>
+                                    <dd><div class="label">リーダー</div>プラム</dd>
+                                </dl>
+                                <!-- <dl class="in_charge">
+                                    <dt>担当クラス</dt>
+                                    <dd>
+                                        <p class="label_3d">3D design & Printing クラス </p>
+                                        <p class="label_electro">Electronics Circuit Programming</p>
+                                        <p class="label_stemcamp">STEM CAMP</p>
+                                    </dd>
+                                </dl> -->
+                                <dl>
+                                    <dt>学歴</dt>
+                                    <dd>名古屋大学 工学部 機械航空工学科 卒業</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="message_wrap">
+                            <div class="title">私の好きな科学的事実</div>
+                            <p class="en_txt">My favorite science fact is that time is relative. Imagine you zoom off from Earth in a super-fast rocket, zip around for a year, and then return. You'd actually be a bit in the future compared to everyone who stayed on Earth!</p>
+                            <p class="jp_txt">私の好きな科学の事実は、時間が相対的であることです。地球から超高速ロケットで飛び出して、一年間飛び回って戻ってくると、地球に残ったみんなと比べて少しだけ未来にいることになるんですよ。</p>
+                        </div>
+                    </li>
+
+                    <!-- オリ -->
+                    <li>
+                        <div class="profile">
+                            <div class="img_wrap">
+                                <img src="img/stem/member_ph02.jpg" alt="写真">
+                            </div>
+                            <div class="profile_txt">
+                                <dl>
+                                    <dt>ニックネーム</dt>
+                                    <dd><div class="label">サブリーダー</div>オリ</dd>
+                                </dl>
+                                <!-- <dl class="in_charge">
+                                    <dt>担当クラス</dt>
+                                    <dd>
+                                        <p class="label_first">マイ・ファーストステムラボクラス</p><p class="label_pbl">PBL-STEMクラス</p><p class="label_Scratch">スクラッチ・プログラミング</p><p class="label_advaced">アドバンスプログラムミックスクラス</p><p class="label_3d">3D design & Printing クラス </p><p class="label_electro">Electronics Circuit Programming</p>
+                                    </dd>
+                                </dl> -->
+                                <dl>
+                                    <dt>学歴</dt>
+                                    <dd>ユニバーシティ・オブ・ザ・ピープル 卒業</dd>
+                                </dl>
+                                <dl>
+                                    <dt>資格</dt>
+                                    <dd>経営学修士, コンピューター・サイエンス理学士(120時間のTESOL/TEFL資格, 80時間TEOL認定証, 70時間TEAL認定証, 60時間TEYL認定証),
+                                        Pythonデベロッパー認定証, PHP認定証 </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="message_wrap">
+                            <div class="title">私の好きな科学的事実</div>
+                            <p class="en_txt">One fascinating scientific fact that is intriguing is the concept of quantum entanglement. This phenomenon occurs when pairs or groups of particles become correlated in such a way that the state of one particle instantly influences the state of another, regardless of the distance between them.</p>
+                            <p class="jp_txt">興味深い科学的事実の一つは、量子もつれの概念です。この現象は、粒子のペアやグループが相互に関係するようになり、たとえその粒子同士がどんなに離れていても、一方の粒子の状態が瞬時にもう一方の粒子の状態に影響を与えるというものなんですよ。</p>
+                        </div>
+                    </li>
+
+                    <!-- ニワ -->
+                    <li>
+                        <div class="profile">
+                            <div class="img_wrap">
+                                <img src="img/stem/member_ph03.jpg" alt="写真">
+                            </div>
+                            <div class="profile_txt">
+                                <dl>
+                                    <dt>ニックネーム</dt>
+                                    <dd>ニワ</dd>
+                                </dl>
+                                <!-- <dl class="in_charge">
+                                    <dt>担当クラス</dt>
+                                    <dd>
+                                        <p class="label_first">マイ・ファーストステムラボクラス</p>
+                                    </dd>
+                                </dl> -->
+                                <dl>
+                                    <dt>学歴</dt>
+                                    <dd>名古屋工業大学 工学部 電気機械工学科 卒業</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="message_wrap">
+                            <div class="title">私の好きな科学的事実</div>
+                            <p class="en_txt">Bananas are radioactive. </p>
+                            <p class="jp_txt">バナナは放射能を持っています。※日常的にバナナを食べることで放射能の影響を受けることはないため、心配する必要はありませんよ。</p>
+                        </div>
+                    </li>
+
+                    <!-- ラエル -->
+                    <li>
+                        <div class="profile">
+                            <div class="img_wrap">
+                                <img src="img/stem/member_ph04.jpg" alt="写真">
+                            </div>
+                            <div class="profile_txt">
+                                <dl>
+                                    <dt>ニックネーム</dt>
+                                    <dd>ラエル</dd>
+                                </dl>
+                                <!-- <dl class="in_charge">
+                                    <dt>担当クラス</dt>
+                                    <dd>
+                                        <p class="label_first">マイ・ファーストステムラボクラス</p>
+                                    </dd>
+                                </dl> -->
+                                <dl>
+                                    <dt>学歴</dt>
+                                    <dd>メトロポリタンメディカルセンター 博士課程修了</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="message_wrap">
+                            <div class="title">私の好きな科学的事実</div>
+                            <p class="en_txt">Penguins have knees.</p>
+                            <p class="jp_txt">ペンギンには膝があるってしっていた？</p>
+                        </div>
+                    </li>
+
+                    <!-- カーラ -->
+                    <li>
+                        <div class="profile">
+                            <div class="img_wrap">
+                                <img src="img/stem/member_ph05.jpg" alt="写真">
+                            </div>
+                            <div class="profile_txt">
+                                <dl>
+                                    <dt>ニックネーム</dt>
+                                    <dd>カーラ</dd>
+                                </dl>
+                                <!-- <dl class="in_charge">
+                                    <dt>担当クラス</dt>
+                                    <dd>
+                                        <p class="label_first">マイ・ファーストステムラボクラス</p>
+                                    </dd>
+                                </dl> -->
+                                <dl>
+                                    <dt>学歴</dt>
+                                    <dd>フィリピン大学 生物学部 卒業</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="message_wrap">
+                            <div class="title">私の好きな科学的事実</div>
+                            <p class="en_txt">your DNA is so long that it can streach from the earth to the moon 1000s of times </p>
+                            <p class="jp_txt">人間のDNAは非常に長く、地球から月まで何千回も伸びることができます。</p>
+                        </div>
+                    </li>
+
+                    <!-- マーク -->
+                    <li>
+                        <div class="profile">
+                            <div class="img_wrap">
+                                <img src="img/stem/member_ph06.jpg" alt="写真">
+                            </div>
+                            <div class="profile_txt">
+                                <dl>
+                                    <dt>ニックネーム</dt>
+                                    <dd>マーク</dd>
+                                </dl>
+                                <!-- <dl class="in_charge">
+                                    <dt>担当クラス</dt>
+                                    <dd>
+                                        <p class="label_first">マイ・ファーストステムラボクラス</p>
+                                    </dd>
+                                </dl> -->
+                                <dl>
+                                    <dt>学歴</dt>
+                                    <dd>AMA大学 情報学部 卒業</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="message_wrap">
+                            <div class="title">私の好きな科学的事実</div>
+                            <p class="en_txt">spinosarus and tyranosarus didn't get to meet each other because they lived in different eras</p>
+                            <p class="jp_txt">スピノサウルスとティラノサウルスは別の時代に生きてたから、本当は、出会うことはなかったんだよ。</p>
+                        </div>
+                    </li>
+
+                    <!-- JB -->
+                    <li>
+                        <div class="profile">
+                            <div class="img_wrap">
+                                <img src="img/stem/member_ph07.jpg" alt="写真">
+                            </div>
+                            <div class="profile_txt">
+                                <dl>
+                                    <dt>ニックネーム</dt>
+                                    <dd>JB</dd>
+                                </dl>
+                                <!-- <dl class="in_charge">
+                                    <dt>担当クラス</dt>
+                                    <dd>
+                                        <p class="label_first">マイ・ファーストステムラボクラス</p>
+                                    </dd>
+                                </dl> -->
+                                <dl>
+                                    <dt>学歴</dt>
+                                    <dd>ウェストバージニア大学 (学科の情報ください) 卒業</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="message_wrap">
+                            <div class="title">私の好きな科学的事実</div>
+                            <p class="en_txt">Mars has lower gravity than Earth. That means a person that weighs 200 pounds on Earth would only weigh 76 pounds on Mars.</p>
+                            <p class="jp_txt">火星の重力は地球よりも弱いんだよ。それってつまり、地球で200ポンド（約90キロ）の人が火星ではたったの76ポンド（約34キロ）しか重さがないってことなんだ。</p>
+                        </div>
+                    </li>
+
+                    <!-- ケラブ -->
+                    <li>
+                        <div class="profile">
+                            <div class="img_wrap">
+                                <img src="img/stem/member_ph08.jpg" alt="写真">
+                            </div>
+                            <div class="profile_txt">
+                                <dl>
+                                    <dt>ニックネーム</dt>
+                                    <dd>ケラブ</dd>
+                                </dl>
+                                <!-- <dl class="in_charge">
+                                    <dt>担当クラス</dt>
+                                    <dd>
+                                        <p class="label_3d">3D design & Printing クラス </p>
+                                        <p class="label_electro">Electronics Circuit Programming</p>
+                                    </dd>
+                                </dl> -->
+                                <dl>
+                                    <dt>学歴</dt>
+                                    <dd>名古屋大学 工学部 機械航空工学科 卒業</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="message_wrap">
+                            <div class="title">私の好きな科学的事実</div>
+                            <p class="en_txt">DNA can store up to 500 exabytes of data !</p>
+                            <p class="jp_txt">DNAは最大500エクサバイトのデータを保存できるんだよ～！</p>
+                        </div>
+                    </li>
+
+                    <!-- ジェズ -->
+                    <li>
+                        <div class="profile">
+                            <div class="img_wrap">
+                                <img src="img/stem/member_ph09.jpg" alt="写真">
+                            </div>
+                            <div class="profile_txt">
+                                <dl>
+                                    <dt>ニックネーム</dt>
+                                    <dd>ジェズ</dd>
+                                </dl>
+                                <!-- <dl class="in_charge">
+                                    <dt>担当クラス</dt>
+                                    <dd>
+                                        <p class="label_pbl">PBL-STEMクラス</p>
+                                        <p class="label_Scratch">スクラッチ・プログラミング</p>
+                                    </dd>
+                                </dl> -->
+                                <dl>
+                                    <dt>学歴</dt>
+                                    <dd>名古屋大学 情報学部 自然情報学科 在学</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="message_wrap">
+                            <div class="title">私の好きな科学的事実</div>
+                            <p class="en_txt">Rice's Theorem (No nontrivial semantic property of p.c functions is decidable)</p>
+                            <p class="jp_txt">ライスの定理です。（部分再帰関数の非自明な意味論的性質は決定可能ではない、ということです。）※ある種の複雑な性質については、それが本当に成り立つかどうかをコンピュータを使って完全に判定することは不可能、ということです。</p>
+                        </div>
+                    </li>
+
+                    <!-- ディミトリー -->
+                    <li>
+                        <div class="profile">
+                            <div class="img_wrap">
+                                <img src="img/stem/member_ph10.jpg" alt="写真">
+                            </div>
+                            <div class="profile_txt">
+                                <dl>
+                                    <dt>ニックネーム</dt>
+                                    <dd>ディミトリー</dd>
+                                </dl>
+                                <!-- <dl class="in_charge">
+                                    <dt>担当クラス</dt>
+                                    <dd>
+                                        <p class="label_pbl">PBL-STEMクラス</p>
+                                        <p class="label_Scratch">スクラッチ・プログラミング</p>
+                                    </dd>
+                                </dl> -->
+                                <dl>
+                                    <dt>学歴</dt>
+                                    <dd>名古屋大学 理学部化学科 卒業</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="message_wrap">
+                            <div class="title">私の好きな科学的事実</div>
+                            <p class="en_txt">I'm impressed by the fact that mirror images of the same organic molecule can be one a medicine and another a poison. Nature's complexity is inspiring, but it also demands caution and respect.</p>
+                            <p class="jp_txt">同じ有機分子の鏡像が、薬にも毒にもなるっていう事実に感動しちゃうよね。自然の複雑さは本当に驚くべきだけど、同時に慎重さと敬意が必要だね。</p>
+                        </div>
+                    </li>
+
+                    <!-- リー -->
+                    <li>
+                        <div class="profile">
+                            <div class="img_wrap">
+                                <img src="img/stem/member_ph11.jpg" alt="写真">
+                            </div>
+                            <div class="profile_txt">
+                                <dl>
+                                    <dt>ニックネーム</dt>
+                                    <dd>ディミトリー</dd>
+                                </dl>
+                                <!-- <dl class="in_charge">
+                                    <dt>担当クラス</dt>
+                                    <dd>
+                                        <p class="label_first">マイ・ファーストステムラボクラス</p>
+                                        <p class="label_pbl">PBL-STEMクラス</p>
+                                        <p class="label_Scratch">スクラッチ・プログラミング</p>
+                                    </dd>
+                                </dl> -->
+                                <dl>
+                                    <dt>学歴</dt>
+                                    <dd>名古屋工業大学 工学部 在学</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="message_wrap">
+                            <div class="title">私の好きな科学的事実</div>
+                            <p class="en_txt">If you put 1 of every animal in a bag and then pick one out you have a 1/5 chance in picking a beetle</p>
+                            <p class="jp_txt">動物を1匹ずつ袋に入れてその中から1匹を選んだ場合、カブトムシを引く確率は5分の1、ということです。※つまり、全ての動物の中でカブトムシが占める割合が20%（5分の1）ということですね！</p>
+                        </div>
+                    </li>
+
+                    <!-- ハオ -->
+                    <li>
+                        <div class="profile">
+                            <div class="img_wrap">
+                                <img src="img/stem/member_ph12.jpg" alt="写真">
+                            </div>
+                            <div class="profile_txt">
+                                <dl>
+                                    <dt>ニックネーム</dt>
+                                    <dd>ハオ</dd>
+                                </dl>
+                                <!-- <dl class="in_charge">
+                                    <dt>担当クラス</dt>
+                                    <dd>
+                                        <p class="label_pbl">PBL-STEMクラス</p>
+                                    </dd>
+                                </dl> -->
+                                <dl>
+                                    <dt>学歴</dt>
+                                    <dd>名古屋大学 大学院 国際開発研究科 博士課程在学</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="message_wrap">
+                            <div class="title">私の好きな科学的事実</div>
+                            <p class="en_txt">Diamond is actually carbon under high pressure.</p>
+                            <p class="jp_txt">ダイヤモンドは、実際には高圧下の炭素である、ということです。※ダイヤモンドは、特定の環境条件で炭素が変化したものにすぎないよ、という意味です。</p>
+                        </div>
+                    </li>
+
+                    <!-- ヴィキー -->
+                    <li>
+                        <div class="profile">
+                            <div class="img_wrap">
+                                <img src="img/stem/member_ph13.jpg" alt="写真">
+                            </div>
+                            <div class="profile_txt">
+                                <dl>
+                                    <dt>ニックネーム</dt>
+                                    <dd>ヴィキー</dd>
+                                </dl>
+                                <!-- <dl class="in_charge">
+                                    <dt>担当クラス</dt>
+                                    <dd>
+                                        <p class="label_stemcamp">STEM CAMP</p>
+                                    </dd>
+                                </dl> -->
+                                <dl>
+                                    <dt>学歴</dt>
+                                    <dd>名古屋大学 工学部 機械航空工学科 卒業</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="message_wrap">
+                            <div class="title">私の好きな科学的事実</div>
+                            <p class="en_txt">Supernova explosions can create something called "galactic fountains" hehe :) It's so appropriate for what it looks like :) </p>
+                            <p class="jp_txt">超新星爆発は『銀河の泉』って呼ばれるものを作ることがあるんだよね、へへ :) まさに見た目通りって感じだよね :)</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <!-- ----------　▲先生紹介▲　------------>
+
+            <section class="sec_contact">
+                <div class="inner">
+                    <div class="title_wrap">
+                        <img src="img/stem/contact.png" alt="CONTACT">
+                        <p class="black">お問い合わせ</p>
+                    </div>
+                    <p class="txt">STEM SCHOOLについては<br class="pc_none">下記よりお気軽にお問い合わせください</p>
+                    <div class="btn btn_page_link"><a href="stem.html#classes_fees"><span>クラスを見る</span></a></div>
+                    <div class="btn_list">
+                        <div class="btn"><a href="#"><span>無料体験申し込み</span></a></div>
+                        <div class="btn"><a href="#"><span>資料請求・お問い合わせ</span></a></div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="footer_wrap">
+                <footer>
+                    <div class="footer_logo">
+                        <img src="img/stem/footer_logo.svg" alt="Alive インターナショナルスクール イングリッシュスクール">
+                    </div>
+                    <nav class="footer_nav">
+                        <ul>
+                            <li><a href="#">採用情報</a></li>
+                            <li><a href="#">プライバシーポリシー</a></li>
+                            <li><a href="#">お問い合わせ</a></li>
+                        </ul>
+                    </nav>
+                    <small class="copy">&copy;All Rights Reserved.</small>
+                </footer>
+            </div>
+
+
+        </article>
+    </div>
+    <!-- ----------ここまでWP---------- -->
+    <!-- jqueryバージョン設定 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- script読み込み -->
+    <script type="text/javascript" src="js/stem.js"></script>
+    <script src="https://kit.fontawesome.com/4b9ea2b926.js" crossorigin="anonymous"></script>
+
+    <!-- クリッカブルマップ -->
+    <script src="https://unpkg.com/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
+    <script>imageMapResize();</script>
+</body>
+</html>

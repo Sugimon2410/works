@@ -1,0 +1,64 @@
+$breakpoint-sm: 414px !default;
+$breakpoint-md: 769px !default;
+$breakpoint-lg: 1000px !default;
+$breakpoint-xl: 1200px !default;
+
+$breakpoints: (
+    'sm': 'screen and (min-width: 414pxpx)',
+    'md': 'screen and (min-width: 769px)',
+    'lg': 'screen and (min-width: 1000px)',
+    'xl': 'screen and (min-width: 1200px)',
+) !default;
+
+//md(768px)を基準値とします
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+        }
+    }
+
+/* 変数の定義
+--------------------------------------------------*/
+// min-width
+$breakpoint-up: (
+    'sm': 'screen and (min-width: 414px)',
+    'md': 'screen and (min-width: 769px)',
+    'lg': 'screen and (min-width: 1000px)',
+    'xl': 'screen and (min-width: 1200px)',
+) !default;
+
+// max-width
+$breakpoint-down: (
+    'sm': 'screen and (max-width: 413px)',
+    'md': 'screen and (max-width: 768px)',
+    'lg': 'screen and (max-width: 999px)',
+    'xl': 'screen and (max-width: 1199px)',
+) !default;
+
+// @mixinの定義
+@mixin mq-up($breakpoint: md) {
+    @media #{map-get($breakpoint-up, $breakpoint)} {
+        @content;
+    }
+}
+
+@mixin mq-down($breakpoint: md) {
+    @media #{map-get($breakpoint-down, $breakpoint)} {
+    @content;
+    }
+}
+@mixin sm-down($breakpoint: sm) {
+    @media #{map-get($breakpoint-down, $breakpoint)} {
+    @content;
+    }
+}
+@mixin lg-down($breakpoint: lg) {
+    @media #{map-get($breakpoint-down, $breakpoint)} {
+    @content;
+    }
+}
+@mixin xl-down($breakpoint: xl) {
+    @media #{map-get($breakpoint-down, $breakpoint)} {
+    @content;
+    }
+}

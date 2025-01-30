@@ -1,0 +1,1603 @@
+@charset "utf-8";
+
+// base
+@use "base";
+
+// variable
+@use "variable";
+
+/*-----------------------------------------
+
+※このスタイルシートはSCSSで生成されています。
+cssへの直記入はなさらないようにしてください。
+
+-----------------------------------------*/
+@use "variable" as v;
+
+/* フォントの定義
+--------------------------------------------------*/
+.page_stem_wrapper,.stem_header{
+    overflow-wrap: break-word;
+    html{
+        font-size: 10px;
+    }
+    /* デフォルトでは Noto Sans JP を使用 */
+    body, ul, ol, dl, li, dt, dd, p, div, span, img, svg, a, table, tr, th, td, figure ,select,input,textarea ,label{
+        font-family: "M PLUS 2", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 18px;
+        letter-spacing: 0em;
+        line-height: 1.5;
+        color: #0b0b0b;
+        letter-spacing: 0.1em;
+        @include v.mq-down {
+            font-size: 16px;
+        }
+    }
+    
+    h1, h2, h3, h4 {
+        font-family: "M PLUS 2", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 16px;
+        letter-spacing: 0em;
+        line-height: 1.5;
+        color: #0b0b0b;
+        letter-spacing: 0.1em;
+    }
+    a{
+        font-family: "M PLUS 2", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        line-height: 1.75;
+        letter-spacing: 0.1em;
+    }
+    
+    p{
+        font-family: "M PLUS 2", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 1.75;
+        letter-spacing: 0.12em;
+    }
+    
+    .russo-one-regular {
+        font-family: "Russo One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+}
+
+  /* 共通
+--------------------------------------------------*/
+/* カラー */
+$white: #fff;
+$black:#0b0b0b;
+$yellow: #ffc10c;
+$pink: #e2228d;
+$deep_blue: #031057;
+$red: #f13347;
+$red: #f13347;
+$purple: #a455ff;
+
+.page_stem_wrapper{
+    .pc_none{
+        display: none;
+        @include v.mq-down() {
+            display: block;
+        }
+    }
+    .sp_none{
+        display: block;
+        @include v.mq-down() {
+            display: none;
+        }
+    }
+    
+    .small_title{
+        letter-spacing: 0.12em;
+        font-size: 30px;
+        font-weight: 900;
+        color: #fff;
+        position: relative;
+        padding:0 18px;
+        display: inline-block;
+        &::before{
+            position: absolute;
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+            background-color: $red;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &::after{
+            position: absolute;
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+            background-color: $red;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    .small_title_center{
+        text-align: center;
+    }
+    .btn{
+        width: 320px;
+        @include v.mq-down() {
+            width: 90%;
+            max-width: 320px;
+        }
+        a{
+            position: relative;
+            top: 0;
+            display: block;
+            padding: 25px;
+            border: 3px solid $red;
+            background-color: #fff;
+            box-shadow: 0 9px $red;
+            text-align: center;
+            text-decoration: none;
+            transition: .2s ease-in-out;
+            &:hover {
+                top: 9px; /* 元の位置から9px分下げる */
+                box-shadow: 0 0 $red /* 影を0pxにする */
+            }
+            span{
+                font-size: 15px;
+                font-weight: 700;
+                padding:0 18px;
+                display: inline-block;
+                position: relative;
+                &::before{
+                    position: absolute;
+                    content: "";
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 4px;
+                    background-color: $red;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+    /* ページリンク */
+    hr{
+        margin: 0;
+        // margin-top: -60px;
+        border: none;
+    }
+}
+
+/*--------------------------------------------------*/
+/* ヘッダー */
+/*--------------------------------------------------*/
+.stem_header{
+    position: fixed;
+    z-index: 3;
+    background-color: #01084d;
+    width: 100%;
+
+
+    .pc_nav{
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background-color: #01084d;
+        @include v.mq-down {
+            display: none;
+        }
+        h1{
+            width: 50px;
+            height: 64px;
+            margin-left: 80px;
+            @include v.lg-down() {
+                margin-left: 2%;
+                width: 49px;
+                height: 54px;
+            }
+        }
+        .menu{
+            display: flex;
+            align-items: center;
+            .insta_link{
+                display: flex;
+                align-items: center;
+            }
+            #insta_icon{
+                fill: #fff;
+                transition: .3s;
+                width: 18px;
+                height: 18px;
+                &:hover{
+                    fill: $red;
+                }
+            }
+            .txt_menu{
+                display: flex;
+                column-gap: 40px;
+                margin-right: 40px;
+                @include v.lg-down() {
+                    column-gap: 30px;
+                    margin-right: 30px;
+                }
+                li{
+                    &:last-of-type{
+                        display: flex;
+                        align-items: center;
+                    }
+                    a{
+                        color: #fff;
+                        transition: .3s;
+                        &:hover{
+                            color: $red;
+                        }
+                        @include v.lg-down() {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            .btn_menu{
+                display: flex;
+                li{
+                    .btn{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 80px;
+                        width: 160px;
+                        text-align: center;
+                        transition: .3s;
+                        color: #fff;
+                        @include v.lg-down() {
+                            font-size: 14px;
+                            height: 70px;
+                            width: 140px;
+                        }
+                    }
+                    &:first-of-type{
+                        .btn{
+                            background-color: $yellow;
+                            &:hover{
+                                color:  $yellow;
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                    &:last-of-type{
+                        .btn{
+                            background-color: $pink;
+                            &:hover{
+                                color:  $pink;
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* SPメニュー　----------- */
+    #nav_head{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+        align-items: center;
+        justify-content: flex-end;
+        transition: .3s;
+        height: 60px;
+        @include v.mq-down() {
+            display: flex;
+        }
+        .header_logo_sp{
+            width: 130px;
+            margin-left: 5%;
+            height: 60px;
+            margin-left: 5%;
+            display: flex;
+            align-items: center;
+        }
+        .nav_btn_wrap{
+            display: flex;
+            background-color: $yellow;
+        }
+        //ハンバーガーメニュー
+        .openbtn {
+            display: none;
+            position: relative;
+            cursor: pointer;
+            width: 60px;
+            height: 60px;
+            z-index: 1001;
+
+            @include v.mq-down(lg) {
+                display: block;
+            }
+        }
+        
+        .openbtn span {
+            display: inline-block;
+            transition: all .4s;
+            position: absolute;
+            left: 20%;
+            height: 2px;
+            background: $black;
+            width: 60%;
+        }
+
+        .openbtn span:nth-of-type(1) {
+            top: 18px;
+            transform-origin: right center;
+        }
+
+        .openbtn span:nth-of-type(2) {
+            top: 26px;
+            transform-origin: left center;
+        }
+
+        .openbtn span:nth-of-type(3) {
+            top: 30px;
+            width: 100%;
+            left: 0;
+            background-color: transparent;
+        }
+
+        .openbtn span:nth-of-type(3)::after {
+            content: "MENU";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color: $black;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0;
+        }
+
+        .openbtn.active span:nth-of-type(1) {
+            transform: translate(-0.5px, 0) rotate(-15deg);
+        }
+
+        .openbtn.active span:nth-of-type(2) {
+            transform: translate(0.5px, -8px) rotate(15deg);
+        }
+
+        .openbtn.active span:nth-of-type(3)::after {
+            content: "CLOSE";
+        }
+    }
+    #nav_sp {
+        padding: 60px 0 0;
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $deep_blue;
+        overflow-y: auto;
+        overscroll-behavior-y: contain;
+        opacity: 0;
+        pointer-events: none;
+        transition-duration: .4s;
+        transform: translateX(10%);
+        z-index: 999;
+        &.active {
+            opacity: 1;
+            pointer-events: all;
+            transform: translateX(0);
+        }
+        @include v.mq-down() {
+            display: block;
+        }
+        .txt_menu{
+            width: 90%;
+            margin: auto;
+            li{
+                border-bottom: 1px solid #fff;
+            }
+            a{
+                color: #fff;
+                padding: 20px 10px;
+                display: block;
+                transition: .3s;
+            }
+            .insta_link{
+                display: flex;
+                align-items: center;
+                #insta_icon{
+                    fill: #fff;
+                    transition: .3s;
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+        .btn_menu{
+            a{
+                color: #fff;
+                display: block;
+                height: 60px;
+                width: 90%;
+                max-width: 320px;
+                margin: auto;
+                line-height: 1.3;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            li{
+                margin-top: 20px;
+                &:first-of-type{
+                    .btn{
+                        background-color: $yellow;
+                    }
+                }
+                &:last-of-type{
+                    .btn{
+                        background-color: $pink;
+                    }
+                }
+            }
+        }
+    }
+}
+/*--------------------------------------------------*/
+/* ページ全体の背景 */
+/*--------------------------------------------------*/
+.page_stem_wrapper{
+    position: relative;
+    .page_stem,.page_stem_teacher{
+        /* 方眼紙模様に必須のスタイル */
+        background-image: linear-gradient(0deg, transparent calc(100% - 1px), $black calc(100% - 1px)),
+        linear-gradient(90deg, transparent calc(100% - 1px), $black calc(100% - 1px));
+        background-size: 33px 33px;
+        background-repeat: repeat;
+        background-position: center center;
+        position: relative;
+        z-index: 2;
+    }
+    &::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: $deep_blue;
+    z-index: 1;
+    }
+
+
+/*--------------------------------------------------*/
+/* キービジュアル */
+/*--------------------------------------------------*/
+.sec_kv{
+    .band{
+        background-color: $pink;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        img{
+            width: 30px;
+            height: 24px;
+            display: block;
+        }
+        .txt{
+            color: #fff;
+            font-weight: 700;
+            margin-left: 15px;
+        }
+    }
+}
+/*--------------------------------------------------*/
+/* 生徒の写真エリア　*/
+/*--------------------------------------------------*/
+.sec_student_ph{
+    max-width: 1110px;
+    width: 90%;
+    margin: 60px auto auto;
+    display: flex;
+    column-gap: 40px;
+    .student_ph01,.student_ph02{
+        width: calc(50% - 20px);
+    }
+        @include v.mq-down() {
+            margin: 40px auto auto;
+            width: 90%;
+            display: block;
+            .student_ph01,.student_ph02{
+                width: 100%;
+                max-width: 500px;
+                margin: auto;
+            }
+            .student_ph01{
+                margin-bottom: 40px;
+            }
+        }
+    }
+/*--------------------------------------------------*/
+/* テクノロジーで世界を変える 理念　*/
+/*--------------------------------------------------*/
+.sec_philosophy{
+max-width: 1110px;
+width: 90%;
+height: auto;
+margin: 150px auto auto;
+    @include v.mq-down() {
+        margin: 80px auto auto;
+        width: 100%;
+    }
+}
+/*--------------------------------------------------*/
+/* What's “STEM”? */
+/*--------------------------------------------------*/
+.sec_whats_stem,.sec_features{
+    width: 90%;
+    max-width: 1080px;
+    margin: 100px auto auto;
+    @include v.mq-down() {
+        margin: 40px auto auto;
+    }
+    .title_wrap{
+        img{
+            max-width: 990px;
+            width: 70vw;
+            @include v.mq-down() {
+                width: 100%;
+                max-width: 500px;
+            }
+        }
+        .black{
+            font-weight: 900;
+            color: #fff;
+            margin: 20px auto;
+            font-size: 20px;
+        }
+    }
+    .title{
+        color: #fff;
+        position: relative;
+        padding-left: 18px;
+        padding-bottom: 5px;
+        margin-top: 20px;
+        border-bottom: 2px solid #f13347;
+        &::before{
+            position: absolute;
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+            background-color: #f13347;
+            left: 0;
+            top: 12px;
+        }
+    }
+    .small{
+        padding-left: 18px;
+        color: #fff;
+        margin-top: 10px;
+    }
+    .txt{
+        margin: 20px auto auto;
+        color: #fff;
+        .note{
+            color: #fff;
+            font-size: 80%;
+        }
+    }
+    .large_catch{
+        font-size: 28px;
+        text-align: center;
+        color: #fff;
+        margin: 40px auto 20px;
+        @include v.mq-down() {
+            font-size: 24px;
+        }
+    }
+    .btn_list{
+        display: flex;
+        justify-content: center;
+        column-gap: 80px;
+        @include v.mq-down() {
+            display: block;
+            .btn{
+                margin: auto auto 30px ;
+                &:last-of-type{
+                    margin: auto auto auto ;
+                }
+            }
+        }
+    }
+}
+/*--------------------------------------------------*/
+/* クラス・料金 */
+/*--------------------------------------------------*/
+.sec_classes_fees{
+    width: 90%;
+    max-width: 1240px;
+    margin: 100px auto auto;
+    @include v.mq-down() {
+        margin: 80px auto auto;
+    }
+    .title_wrap{
+        margin-bottom: 120px;
+        @include v.mq-down() {
+            margin-bottom: 80px;
+        }
+        img{
+            max-width: 990px;
+            width: 70vw;
+            margin: auto;
+            @include v.mq-down() {
+                width: 100%;
+                max-width: 500px;
+            }
+        }
+        .black{
+            font-weight: 900;
+            color: #fff;
+            text-align: center;
+            margin: 20px auto;
+            font-size: 20px;
+        }
+    }
+    .class_block{
+        position:relative;
+        padding: 0 0 60px;
+        .txt{
+            color: #fff;
+            margin-bottom: 10px;
+            .strong{
+                color: #fff;
+                background-color: $pink;
+                padding: 0 5px;
+            }
+            @include v.lg-down() {
+                width: 100%;
+            }
+        }
+        .point_txt{
+            position: relative;
+            color: #fff;
+            padding-left: 18px;
+            &::before{
+                position: absolute;
+                content: "";
+                width: 8px;
+                height: 8px;
+                border-radius: 4px;
+                background-color: #f13347;
+                left: 0;
+                top: 12px;
+            }
+        }
+    }
+    .intro{
+        padding: 80px 80px 0;
+        @include v.mq-down() {
+            padding: 60px 20px 20px;
+        }
+    }
+    .voice_block{
+        margin-top: -80px;
+        background-image: url(../img/stem/bg_voice.jpg);
+        background-size: cover;
+        padding: 200px 0 80px;
+        @include v.mq-down() {
+            margin-top: -41.67vw;
+            padding: 52.08vw 0 80px;
+        }
+        .voice_block_inner{
+            padding: 0 80px;
+            @include v.mq-down() {
+                padding: 0 20px;
+            }
+        }
+        ul{
+            margin-top: 40px;
+            li{
+                background-color: #fff;
+                position: relative;
+                margin-bottom: 60px;
+                padding: 50px 40px 40px;
+                width: calc(100% - 80px);
+                margin-left: 0;
+                @include v.mq-down() {
+                    width: 100%;
+                    padding: 50px 20px 20px;
+                    margin-bottom: 40px;
+                }
+                &:nth-child(even){
+                    margin-left: auto;
+                    margin-right: 0;
+                }
+                &:last-of-type{
+                    margin-bottom: 0;
+                }
+                .name{
+                    position: absolute;
+                    top: -15px;
+                    font-size: 18px;
+                    display: inline-block;
+                    padding: 0px 20px;
+                    @include v.mq-down() {
+                        font-size: 16px;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+    .fee_block{
+        padding: 80px 80px 60px;
+        @include v.mq-down() {
+            padding: 60px 20px;
+        }
+        .card_list{
+            width: 100%;
+            max-width: 1080px;
+            margin: 40px auto auto;
+            display: flex;
+            column-gap: 30px;
+            justify-content: center;
+            @include v.mq-down() {
+                flex-wrap: wrap;
+                column-gap: 20px;
+                row-gap: 20px;
+                li{
+                    width: calc(50% - 10px);
+                }
+            }
+        }
+    }
+    .btn_application{
+        margin: auto;
+    }
+    .photo_block{
+        padding: 0 80px;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        column-gap: 80px;
+        @include v.mq-down() {
+            padding: 0 20px;
+            display: block;
+        }
+        .ph{
+            width: calc(50% - 40px);
+            max-width: 500px;
+            @include v.mq-down() {
+                width: 100%;
+                margin: auto auto 20px;
+                &:last-of-type{
+                    margin: auto auto auto;
+                }
+            }
+        }
+    }
+    /* マイ・ファーストステムラボクラス */
+    .first_stem_lab{
+        background-color: #193283;
+        border: $yellow 3px solid;
+        .class_name{
+            position: absolute;
+            width: 387px;
+            top: -35px;
+            left: 80px;
+            @include v.mq-down() {
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 90%;
+                max-width: 387px;
+            }
+        }
+        .intro{
+            display: flex;
+            margin-bottom: 20px;
+            @include v.lg-down {
+                display: block;
+            }
+            .txt_wrap{
+                width: calc(100% - 60px - 40%);
+                @include v.lg-down {
+                    width: 100%;
+                }
+            }
+            .mfsl_illust{
+                max-width: 420px;
+                width: 40%;
+                margin: -125px auto auto 60px;
+                @include v.lg-down() {
+                    width: 80%;
+                    margin: 20px auto auto auto;
+                }
+            }
+        }
+        .youtube_block{
+            padding: 0 80px;
+            @include v.mq-down() {
+                padding: 0 20px;
+            }
+            .small_title{
+                margin-bottom: 40px;
+                @include v.mq-down() {
+                    margin-bottom: 20px;
+                }
+            }
+            .btn{
+                margin-bottom: 40px;
+            }
+            .movie_area{
+                display: flex;
+                justify-content: space-between;
+                @include v.mq-down() {
+                    display: block;
+                }
+                .movie_wrap{
+                    width: 48%;
+                    aspect-ratio: 16 / 9;
+                    @include v.mq-down() {
+                        width: 100%;
+                        max-width: 500px;
+                        margin: 20px auto;
+                        &:first-of-type{
+                            margin: auto auto;
+                        }
+                    }
+                    iframe{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        .name{
+            background-color: $yellow;
+        }
+    }
+    /* PBL-STEMクラス */
+    .pbl_stem{
+        background-color: #193283;
+        border: $purple 3px solid;
+        margin-top: 200px;
+        .class_name{
+            position: absolute;
+            width: 382px;
+            top: -45px;
+            right: 80px;
+            @include v.mq-down() {
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 90%;
+                max-width: 387px;
+            }
+        }
+        .intro{
+            display: flex;
+            flex-direction: row-reverse;
+            margin-bottom: 20px;
+            @include v.lg-down {
+                display: block;
+            }
+            .pbl_illust{
+                max-width: 420px;
+                width: 40%;
+                margin: auto 60px auto auto;
+                @include v.lg-down() {
+                    margin: 20px auto auto auto;
+                    width: 80%;
+                }
+            }
+        }
+        .name{
+            background-color: $purple;
+            color: #fff;
+        }
+    }
+    /* スクラッチ・プログラミング */
+    .scratch_programming{
+        background-color: #193283;
+        border: #ea547d 3px solid;
+        margin-top: 200px;
+        .class_name{
+            position: absolute;
+            width: 500px;
+            top: -30px;
+            left: 80px;
+            @include v.mq-down() {
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 90%;
+                max-width: 387px;
+            }
+        }
+        .intro{
+            display: flex;
+            margin-bottom: 20px;
+            @include v.lg-down {
+                display: block;
+            }
+            .scratch_illust{
+                max-width: 420px;
+                width: 40%;
+                margin: auto auto auto 60px;
+                @include v.lg-down() {
+                    width: 80%;
+                    margin: 20px auto auto auto;
+                }
+            }
+        }
+        .name{
+            background-color: #ea547d;
+            color: #fff;
+        }
+    }
+    /* アドバンスプログラムミックスクラス */
+    .advanced_class{
+        background-color: #193283;
+        border: #1fb5ff 3px solid;
+        margin-top: 200px;
+        .class_name{
+            position: absolute;
+            width: 450px;
+            top: -55px;
+            right: 80px;
+            @include v.mq-down() {
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 90%;
+                max-width: 387px;
+            }
+        }
+        .intro{
+            display: flex;
+            flex-direction: row-reverse;
+            margin-bottom: 20px;
+            @include v.lg-down {
+                display: block;
+            }
+            .advanced_illust{
+                max-width: 420px;
+                width: 40%;
+                margin: -190px 60px auto auto;
+                @include v.lg-down() {
+                    width: 80%;
+                    margin: 20px auto auto auto;
+                }
+            }
+        }
+        .name{
+            background-color: #1fb5ff;
+            color: #fff;
+        }
+    }
+        /* 3D design & Printing クラス */
+        .class_3d,.class_electronic{
+            background-color: #193283;
+            border: #19c3ff 3px solid;
+            margin-top: 200px;
+            .class_name{
+                position: absolute;
+                width: 328px;
+                top: -55px;
+                left: 80px;
+                @include v.mq-down() {
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    width: 90%;
+                    max-width:  328px;
+                }
+            }
+            .intro{
+                display: flex;
+                margin-bottom: 20px;
+                @include v.lg-down {
+                    display: block;
+                }
+                .class_3d_illust{
+                    max-width: 240px;
+                    width: 25%;
+                    margin: -190px auto auto 100px;
+                    @include v.lg-down() {
+                        width: 80%;
+                        margin: 20px auto auto auto;
+                    }
+                }
+            }
+            .name{
+                background-color: #19c3ff;
+                color:#fff;
+            }
+        }
+    .stem_note{
+        color: #fff;
+        margin-top: 10px;
+    }
+}
+/*--------------------------------------------------*/
+/* コンタクト */
+/*--------------------------------------------------*/
+.sec_contact{
+    margin-top: 150px;
+    background-color: $purple;
+    padding: 80px 0;
+    position: relative;
+    @include v.mq-down() {
+        margin-top: 80px;
+        padding: 60px 0;
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        background-color: #fff;
+        width: 13px;
+        height: 13px;
+        border-radius: 6.5px;
+        left: 80px;
+        top: 30px;
+        @include v.mq-down() {
+            width: 6px;
+            height: 6px;
+            left: 20px;
+            top: 20px;
+        }
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        background-color: #fff;
+        width: 13px;
+        height: 13px;
+        border-radius: 6.5px;
+        right: 80px;
+        top: 30px;
+        @include v.mq-down() {
+            width: 6px;
+            height: 6px;
+            right: 20px;
+            top: 20px;
+        }
+    }
+    .inner{
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            background-color: #fff;
+            width: 13px;
+            height: 13px;
+            border-radius: 6.5px;
+            left: 86px;
+            bottom: -40px;
+            @include v.mq-down() {
+                width: 6px;
+                height: 6px;
+                left: 26px;
+                bottom: -30px;
+            }
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            background-color: #fff;
+            width: 13px;
+            height: 13px;
+            border-radius: 6.5px;
+            right: 86px;
+            bottom: -40px;
+            @include v.mq-down() {
+                width: 6px;
+                height: 6px;
+                right: 26px;
+                bottom: -30px;
+            }
+        }
+    }
+    .title_wrap{
+        text-align: center;
+        margin-bottom: 30px;
+        img{
+            max-width: 379px;
+            width: 48vw;
+            margin: auto;
+        }
+        .black{
+            font-weight: 900;
+            color: #fff;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    }
+    .txt{
+        color: #fff;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .btn_page_link{
+        margin: auto auto 30px;
+    }
+    .btn_list{
+        display: flex;
+        justify-content: center;
+        column-gap: 80px;
+        @include v.mq-down() {
+            display: block;
+            .btn{
+                margin: auto auto 30px ;
+                &:last-of-type{
+                    margin: auto auto auto ;
+                }
+            }
+        }
+    }
+}
+/*--------------------------------------------------*/
+/* フッター */
+/*--------------------------------------------------*/
+footer{
+    padding: 40px 80px;
+    position: relative;
+    @include v.mq-down {
+        padding: 40px 20px 140px;
+    }
+    &::before{
+        position: absolute;
+        content: "";
+        background-image: url(../img/stem/bill_illust.png);
+        width: 700px;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        background-position: bottom;
+        background-size: cover;
+        z-index: 2;
+        @include v.mq-down {
+            width: 100%;
+            max-width: 400px;
+            height:130px;
+            background-size: cover;
+        }
+    }
+    .footer_logo{
+        width: 260px;
+        margin: auto 0 40px auto;
+        position: relative;
+        z-index: 3;
+        @include v.mq-down {
+            margin: auto auto 40px 0;
+        }
+    }
+    .footer_nav{
+        position: relative;
+        z-index: 3;
+        ul{
+            display: flex;
+            column-gap: 25px;
+            justify-content: flex-end;
+            @include v.mq-down {
+                justify-content: flex-start;
+                display: block;
+            }
+            a{
+                color: #fff;
+                padding-left: 20px;
+                position: relative;
+                transition: .3s;
+                &::before{
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 4px;
+                    background-color: $red;
+                }
+                &:hover{
+                    color: $red;
+                }
+            }
+        }
+    }
+    .copy{
+        font-size: 12px;
+        color: #fff;
+        text-align: right;
+        margin-top: 40px;
+        display: block;
+        position: relative;
+        z-index: 3;
+        
+    }
+}
+
+.footer_wrap{
+    position: relative;
+    footer{
+        /* 方眼紙模様に必須のスタイル */
+        background-image: linear-gradient(0deg, transparent calc(100% - 1px), #162d76 calc(100% - 1px)),
+        linear-gradient(90deg, transparent calc(100% - 1px), #162d76 calc(100% - 1px));
+        background-size: 33px 33px;
+        background-repeat: repeat;
+        background-position: center center;
+        position: relative;
+        z-index: 2;
+    }
+    &::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: #193283;
+    z-index: 1;
+    }
+}
+/* page_stem */
+/*--------------------------------------------------*/
+}
+
+/*--------------------------------------------------*/
+/* 先生紹介 */
+/*--------------------------------------------------*/
+.page_stem_teacher{
+/* キービジュアル */
+/*--------------------------------------------------*/
+    .sec_kv{
+        padding-top: 80px;
+        position: relative;
+        background-image: url(../img/stem/kv_teacher_bg.jpg);
+        height: 400px;
+        width: 100%;
+        background-size: cover;
+        background-position: bottom right;
+        @include v.mq-down() {
+            height: 250px;
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 80px;
+            width: 100%;
+            background-color: #01084d;
+            @include v.lg-down() {
+                height: 70px;
+            }
+            @include v.mq-down() {
+                content: none;
+            }
+
+
+        }
+
+        .title_wrap{
+            position: absolute;
+            top: calc(50% + 80px);
+            transform: translateY(-50%);
+            left: 10%;
+            @include v.xl-down() {
+                left: 5%;
+            }
+            @include v.mq-down() {
+                top: 60%;
+                left: 5%;
+            }
+            img{
+                max-width: 1045px;
+                width: 90%;
+            }
+            .black{
+                font-weight: 900;
+                color: #fff;
+                margin: 20px auto;
+                font-size: 20px;
+            }
+        }
+    }
+    .sec_explanation{
+        max-width: 1160px;
+        width: 90%;
+        margin: 150px auto auto;
+        @include v.mq-down() {
+            margin: 100px auto auto;
+        }
+        .large_txt{
+            color: $pink;
+            font-weight: 700;
+            font-size: clamp(30px,3.57vw,50px);
+            line-height: 1.25;
+            @include v.mq-down() {
+                font-size: 20px;
+            }
+        }
+        .txt{
+            color: #fff;
+            margin-top: 20px;
+        }
+        .merit{
+            margin: 60px auto auto;
+        }
+        .merit_list{
+            .merit_title{
+                color: #fff;
+                margin-top: 40px;
+                background-color: #e2228d;
+                padding: 0 6px;
+                display: inline-block;
+                line-height: 1.5;
+                font-size: 24px;
+                @include v.mq-down() {
+                    font-size: 20px;
+                }
+            }
+            .merit_txt{
+                color: #fff;
+                margin-top: 10px;
+            }
+        }
+    }
+    .sec_introduction{
+        margin: 150px auto auto;
+        @include v.mq-down() {
+            margin: 100px auto auto;
+        }
+        .title_wrap{
+            text-align: center;
+            img{
+                max-width: 1045px;
+                width: 74vw;
+                margin: auto;
+                @include v.mq-down() {
+                    width: 85%;
+                }
+            }
+            .black{
+                font-weight: 900;
+                color: #fff;
+                margin: 20px auto;
+                font-size: 20px;
+            }
+        }
+        .teacher_list{
+            margin-top: 120px;
+            li{
+                background-color: #fff;
+                border: 3px solid $yellow;
+                width: 90%;
+                max-width: 1260px;
+                margin: auto auto 240px;
+                position: relative;
+                @include v.lg-down() {
+                    border-bottom: none;
+                    margin: auto auto 100px;
+                }
+                .profile{
+                    display: flex;
+                    justify-content: flex-start;
+                    column-gap: 60px;
+                    @include v.lg-down() {
+                        display: block;
+                    }
+                    .img_wrap{
+                        width: 380px;
+                        margin: -40px 0 auto -40px;
+                        // position: absolute;
+                        // top: -40px ;
+                        // left: -40px;
+                        @include v.lg-down() {
+                            max-width: 380px;
+                            width: 90%;
+                            margin: -40px auto auto auto;
+                        }
+                    }
+                    .profile_txt{
+                        padding: 40px 0 0;
+                        width: calc( 100% - 380px - 60px);
+                        @include v.lg-down() {
+                            width: 100%;
+                            padding: 40px 20px;
+                        }
+                        dl{
+                            margin-bottom: 40px;
+                            @include v.lg-down() {
+                                margin-bottom: 30px;
+                                &:last-of-type{
+                                    margin-bottom: 10px;
+                                }
+                            }
+                            dt{
+                                position: relative;
+                                display: inline-block;
+                                padding: 0 18px;
+                                &::before{
+                                    position: absolute;
+                                    content: "";
+                                    background-color: $pink;
+                                    width: 8px;
+                                    height: 8px;
+                                    border-radius: 4px;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                }
+                                &::after{
+                                    position: absolute;
+                                    content: "";
+                                    background-color: $pink;
+                                    width: 8px;
+                                    height: 8px;
+                                    border-radius: 4px;
+                                    right: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                }
+                            }
+                            dd{
+                                margin-top: 10px;
+                                .label{
+                                    background-color: $yellow;
+                                    display: inline-block;
+                                    padding: 0 15px;
+                                    margin-right: 10px;
+                                }
+                            }
+                        }
+                        .in_charge{
+                            dd{
+                                margin: 0  auto auto -10px;
+                            }
+                            //クラスラベル
+                            .label_first,.label_pbl,.label_Scratch,.label_advaced,.label_3d,.label_electro,.label_stemcamp{
+                                display: inline-block;
+                                padding: 0 6px;
+                                margin-top: 10px;
+                            }
+                            p{
+                                margin-left: 10px;
+                            }
+                            .label_first{
+                                background-color: $yellow;
+                                color: $black;
+                            }
+                            .label_pbl{
+                                background-color: #9343b4;
+                                color: #fff;
+                            }
+                            .label_Scratch{
+                                background-color: #ea547d;
+                                color: #fff;
+                            }
+                            .label_advaced{
+                                background-color: #1fb5ff;
+                                color: #fff;
+                            }
+                            .label_3d{
+                                background-color: #19c3ff;
+                                color: #fff;
+                            }
+                            .label_electro{
+                                background-color: $black;
+                                color: #fff;
+                            }
+                            .label_stemcamp{
+                                background-color: $black;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+                .message_wrap{
+                    background-color: #193283;
+                    border: 3px solid $pink;
+                    position: absolute;
+                    bottom: -80px;
+                    right: -40px;
+                    width: 100%;
+                    position: relative;
+                    padding: 10px 40px 40px;
+                    @include v.lg-down() {
+                        bottom: 0;
+                        width: calc(100% + 6px);
+                        left: -3px ;
+                        padding: 10px 20px 40px;
+
+                    }
+                    .title{
+                        position: absolute;
+                        top: -28px;
+                        color: #fff;
+                        background-color: $pink;
+                        display: inline-block;
+                        position: relative;
+                        padding: 2px 40px;
+                        &::before{
+                            position: absolute;
+                            content: "";
+                            background-color: #fff;
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 4px;
+                            left: 18px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                        &::after{
+                            position: absolute;
+                            content: "";
+                            background-color: #fff;
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 4px;
+                            right: 18px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                    }
+                    .en_txt{
+                        font-weight: 700;
+                        color: #fff;
+                        margin-bottom: 20px;
+                    }
+                    .jp_txt{
+                        color: #fff;
+                    }
+                }
+                &:nth-child(even){
+                    .profile{
+                        flex-direction: row-reverse;
+                        justify-content: space-between;
+                        .img_wrap{
+                            margin: -40px -40px auto 0;
+                            @include v.lg-down() {
+                                margin: -40px auto auto auto;
+                            }
+                        }
+                        .profile_txt{
+                            margin-left: 40px;
+                            @include v.lg-down() {
+                                margin-left: auto;
+                            }
+                        }
+                    }
+                    .message_wrap{
+                        left: -40px;
+                        bottom: -80px;
+                        @include v.lg-down() {
+                            bottom: 0;
+                            width: calc(100% + 6px);
+                            left: -3px ;
+                            padding: 10px 20px 40px;
+                        }
+                        .title{
+                        left: -6px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
