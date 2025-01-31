@@ -396,8 +396,15 @@
         </div>
         <!-- ▼KVエリア▼ -->
         <section class="sec_top_kv">
-            <img src="img/top/KVと導入.jpg" alt="アライブインターナショナルスクール アライブイングリッシュスクール" class="sp_none">
-            <img src="img/top/未確定箇所.jpg" alt="アライブインターナショナルスクール アライブイングリッシュスクール" class="pc_none">
+            <!-- <img src="img/top/KVと導入.jpg" alt="アライブインターナショナルスクール アライブイングリッシュスクール" class="sp_none">
+            <img src="img/top/未確定箇所.jpg" alt="アライブインターナショナルスクール アライブイングリッシュスクール" class="pc_none"> -->
+            <div class="title">
+                <div class="bg">
+                    <div id="youtube" class="movie"></div>
+                    <div class="mask"></div>
+                </div>
+                <h1 class="txt js_kvTxt"></h1>
+            </div>
         </section>
         <!-- ▲KVエリア▲ -->
 
@@ -954,5 +961,65 @@
     <!-- クリッカブルマップ -->
     <script src="https://unpkg.com/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
     <script>imageMapResize();</script>
+
+    <!-- gsap -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+    <script>
+        // YouTube IFrame Player API
+        var tag = document.createElement("script");
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName("script")[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        let player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player("youtube", { // youtbeの箇所はHTMLのid
+                videoId: "nLXVEQu4GsU", // YouTubeの動画のID
+                playerVars: {
+                    playsinline: 1, // インライン再生
+                    autoplay: 1, // 自動再生
+                    fs: 0, // 全画面表示ボタン
+                    rel: 0, // 関連動画
+                    controls: 0, // コントロール
+                    modestbranding: 0, // YouTubeロゴ
+                    iv_load_policy: 3, // 注釈
+                },
+                events: {
+                    onReady: onPlayerReady,
+                    onStateChange: onPlayerStateChange,
+                },
+            });
+        }
+
+        // ミュートで再生
+        function onPlayerReady(event) {
+            event.target.mute();
+            event.target.playVideo();
+        }
+
+        // 最後まで再生した後のループ再生
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.ENDED) {
+                event.target.playVideo();
+            }
+        }
+        // use a script tag or an external JS file
+        document.addEventListener("DOMContentLoaded", (event) => {
+         gsap.registerPlugin(ScrollTrigger)
+         // gsap code here!
+        });
+
+        gsap.to(".js_kvTxt", {
+            x: 10000,
+            scale: 50,
+            scrollTrigger: {
+                trigger: '.sec_top_kv', //スクロールしたいID,Classなど
+                start: "top top",
+                scrub: true, // trueを設定するとスクラブアニメーションになります
+            },
+        })
+    </script>
 </body>
 </html>

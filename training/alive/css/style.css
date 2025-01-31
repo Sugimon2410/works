@@ -1577,6 +1577,9 @@ cssへの直記入はなさらないようにしてください。
   ボトムバナー
   -----------------------------------------*/
   /*-----------------------------------------
+  キービジュアル
+  -----------------------------------------*/
+  /*-----------------------------------------
   セクションタイトル
   -----------------------------------------*/
   /*-----------------------------------------
@@ -1652,6 +1655,37 @@ cssへの直記入はなさらないようにしてください。
   position: absolute;
   top: -30px;
   right: 0;
+}
+.page_top .sec_top_kv .title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.page_top .sec_top_kv .title .txt {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  -webkit-mask-image: url(../img/top/kv_ttl.png);
+          mask-image: url(../img/top/kv_ttl.png);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+.page_top .sec_top_kv .title .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-mask-size: 100%;
+          mask-size: 100%;
+}
+.page_top .sec_top_kv .title .bg .movie {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 .page_top .sec_title .en {
   font-size: 60px;

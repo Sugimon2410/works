@@ -68,6 +68,39 @@ cssへの直記入はなさらないようにしてください。
 }
 
 /*-----------------------------------------
+キービジュアル
+-----------------------------------------*/
+.sec_top_kv {
+    .title {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        .txt {
+            width: 100%;
+            height: 100%;
+            background: #000;
+            mask-image: url(../img/top/kv_ttl.png);
+            mask-repeat: no-repeat;
+        }
+        .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            mask-size: 100%;
+            .movie {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+/*-----------------------------------------
 セクションタイトル
 -----------------------------------------*/
 .sec_title{
