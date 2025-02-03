@@ -150,38 +150,39 @@ cssへの直記入はなさらないようにしてください。
             }
         }
     }
-    // // テキスト拡大→動画の実装が難航中のため一旦コメントアウト
-    //
-    // .title {
-    //     display: flex;
-    //     align-items: center;
-    //     width: 100%;
-    //     height: 100%;
-    //     // position: relative;
-    //     overflow: hidden;
-    //     .bg,
-    //     .txt {
-    //         position: absolute;
-    //         top: 0;
-    //         left: 0;
-    //         width: 100%;
-    //         height: 100%;
-    //     }
-    //     .bg {
-    //         aspect-ratio: 16 / 9;
-    //         overflow: hidden;
-    //     }
-    //     .txt {
-    //         font-family: "Lato", sans-serif;
-    //         font-size: 6vw;
-    //         font-weight: 900;
-    //         background-color: #fff;
-    //         mix-blend-mode: screen;
-    //         display: flex;
-    //         align-items: center;
-    //         padding-left: calc( 100 / 1400 * 100vw );
-    //     }
-    // }
+    .title {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        // position: relative;
+        overflow: hidden;
+        .bg,
+        .txt {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .bg {
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+        }
+        .txt {
+            font-family: "Lato", sans-serif;
+            line-height: 1.3;
+            font-weight: 900;
+            background-color: #fff;
+            mix-blend-mode: screen;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            font-size: calc((100 / 1400) * 100vw);
+            padding-left: calc((100 / 1400) * 100vw);
+            transform-origin: calc((125 / 1400) * 100vw) calc((371 / 800) * 100vh);
+        }
+    }
 }
 
 .section_wrap {

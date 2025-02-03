@@ -399,7 +399,7 @@
             <!-- <img src="img/top/KVと導入.jpg" alt="アライブインターナショナルスクール アライブイングリッシュスクール" class="sp_none">
             <img src="img/top/未確定箇所.jpg" alt="アライブインターナショナルスクール アライブイングリッシュスクール" class="pc_none"> -->
 
-            <div class="inner">
+            <!-- <div class="inner">
                 <div class="bg">
                     <div id="youtube" class="movie"></div>
                 </div>
@@ -416,11 +416,11 @@
                     </div>
                 </div>
             </div>
-            <span class="scroll">SCROLL</span>
-            <!-- <div class="title">
+            <span class="scroll">SCROLL</span> -->
+            <div class="title">
                 <div id="youtube" class="bg"></div>
                 <h1 class="txt js_kvTxt">Inspire<br>The<br>World</h1>
-            </div> -->
+            </div>
         </section>
         <!-- ▲KVエリア▲ -->
 
@@ -1033,7 +1033,7 @@
 
             $(window).resize(function () {
                 headerHeight = getHeaderHeight();
-                
+
                 setPaddingTopKV(headerHeight);
                 setTopKvBackground(headerHeight);
             })
@@ -1055,6 +1055,7 @@
             return headerHeight;
         }
 
+        //　KVにヘッダーの高さ分のpadding設定
         function setPaddingTopKV(val) {
             let kv = $('.sec_top_kv');
 
@@ -1073,35 +1074,14 @@
          // gsap code here!
         });
 
-        gsap.to(".js_kv_overlay", {
-            opacity: 0,
+        gsap.to(".js_kvTxt", {
+            scale: 200,
             scrollTrigger: {
                 trigger: '.sec_top_kv', //スクロールしたいID,Classなど
-                start: "top top",
+                start: "15% top",
                 scrub: true, // trueを設定するとスクラブアニメーションになります
             },
         })
-
-
-        // テキスト拡大→動画の実装が難航中のため一旦コメントアウト
-        // const winWidth = $(window).width();
-        // const winHeight = $(window).height();
-        // console.log(winWidth, winHeight);
-
-        // const ttl = {
-        //     x: (4920 / 1400 * winWidth) + 'vw',
-        //     scale: 130 / 1400 * winWidth
-        // };
-
-        // gsap.to(".js_kvTxt", {
-        //     x: ttl.x,
-        //     scale: ttl.scale,
-        //     scrollTrigger: {
-        //         trigger: '.sec_top_kv', //スクロールしたいID,Classなど
-        //         start: "top top",
-        //         scrub: true, // trueを設定するとスクラブアニメーションになります
-        //     },
-        // })
     </script>
 </body>
 </html>

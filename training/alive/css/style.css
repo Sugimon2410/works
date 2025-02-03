@@ -1739,6 +1739,38 @@ cssへの直記入はなさらないようにしてください。
   width: 497px;
   height: 504px;
 }
+.page_top .sec_top_kv .title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.page_top .sec_top_kv .title .bg,
+.page_top .sec_top_kv .title .txt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.page_top .sec_top_kv .title .bg {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.page_top .sec_top_kv .title .txt {
+  font-family: "Lato", sans-serif;
+  line-height: 1.3;
+  font-weight: 900;
+  background-color: #fff;
+  mix-blend-mode: screen;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  font-size: 7.1428571429vw;
+  padding-left: 7.1428571429vw;
+  transform-origin: 8.9285714286vw 46.375vh;
+}
 .page_top .section_wrap {
   background-color: #FFF;
   padding-top: 100px;
