@@ -1583,6 +1583,9 @@ cssへの直記入はなさらないようにしてください。
   セクションタイトル
   -----------------------------------------*/
   /*-----------------------------------------
+  introduction
+  -----------------------------------------*/
+  /*-----------------------------------------
   セクションタアライブについて
   -----------------------------------------*/
   /*-----------------------------------------
@@ -1656,36 +1659,89 @@ cssへの直記入はなさらないようにしてください。
   top: -30px;
   right: 0;
 }
-.page_top .sec_top_kv .title {
-  display: flex;
-  align-items: center;
+.page_top .sec_top_kv {
+  box-sizing: border-box;
   width: 100%;
   height: 100vh;
-  position: relative;
+  position: fixed;
+  top: 0;
+  z-index: -1;
 }
-.page_top .sec_top_kv .title .txt {
+.page_top .sec_top_kv .inner {
+  position: relative;
   width: 100%;
   height: 100%;
-  background: #000;
-  -webkit-mask-image: url(../img/top/kv_ttl.png);
-          mask-image: url(../img/top/kv_ttl.png);
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
 }
-.page_top .sec_top_kv .title .bg {
+.page_top .sec_top_kv .inner .bg {
+  width: 100%;
+  height: 100%;
+}
+.page_top .sec_top_kv .inner .bg::before {
+  content: "";
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-mask-size: 100%;
-          mask-size: 100%;
+  z-index: 1;
+  pointer-events: none;
+  background-color: #FFF;
+  opacity: 0.7;
 }
-.page_top .sec_top_kv .title .bg .movie {
+.page_top .sec_top_kv .inner .bg .movie {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   height: 100%;
+  position: relative;
+  -webkit-clip-path: url(#svgPath);
+          clip-path: url(#svgPath);
+}
+.page_top .sec_top_kv .inner .overlay {
+  background-color: #FFF;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 1;
+}
+.page_top .sec_top_kv .inner .overlay .ttl {
+  display: flex;
+  flex-flow: column;
+  background-image: url(../img/top/kv_bg.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding-left: 24px;
+  margin-left: 24px;
+}
+.page_top .sec_top_kv .inner .overlay .ttl .main {
+  font-family: "Lato", sans-serif;
+  font-size: 10rem;
+  font-weight: 900;
+  line-height: 13rem;
+  letter-spacing: 0.05em;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.page_top .sec_top_kv .inner .overlay .ttl .main img {
+  -webkit-mask-image: url(./img/top/kv_ttl.png);
+          mask-image: url(./img/top/kv_ttl.png);
+}
+.page_top .sec_top_kv .inner .overlay .ttl .sub {
+  font-size: 2.8rem;
+}
+.page_top .sec_top_kv .inner .overlay .img img {
+  width: 497px;
+  height: 504px;
+}
+.page_top .section_wrap {
+  background-color: #FFF;
+  padding-top: 100px;
 }
 .page_top .sec_title .en {
   font-size: 60px;
@@ -1709,6 +1765,26 @@ cssへの直記入はなさらないようにしてください。
   .page_top .sec_title .jp {
     font-size: clamp(14px, 4vw, 16px);
   }
+}
+.page_top .sec_intro {
+  margin: 100vh 0 0;
+  padding: 30vh 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/top/intro_bg.png);
+  background-size: 1009px 365px;
+  background-repeat: no-repeat;
+  background-position: 40% center;
+}
+.page_top .sec_intro .txt {
+  text-align: center;
+  font-size: 4.3rem;
+  font-weight: bold;
+  line-height: 6.5rem;
+  display: flex;
+  align-items: center;
 }
 .page_top .sec_aboutus {
   width: 80%;

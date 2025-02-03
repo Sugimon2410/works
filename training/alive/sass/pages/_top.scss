@@ -71,33 +71,122 @@ cssへの直記入はなさらないようにしてください。
 キービジュアル
 -----------------------------------------*/
 .sec_top_kv {
-    .title {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        height: 100vh;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    .inner {
         position: relative;
-        .txt {
+        width: 100%;
+        height: 100%;
+        .bg {
+            // position: fixed;
+            // top: 0;
+            // left: 0;
             width: 100%;
             height: 100%;
-            background: #000;
-            mask-image: url(../img/top/kv_ttl.png);
-            mask-repeat: no-repeat;
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                pointer-events: none;
+                background-color: #FFF;
+                opacity: .7;
+            }
+            .movie {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                position: relative;
+                clip-path: url(#svgPath);
+            }
         }
-        .bg {
+        .overlay {
+            background-color: #FFF;
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            mask-size: 100%;
-            .movie {
-                object-fit: cover;
-                width: 100%;
-                height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            z-index: 1;
+            .ttl {
+                display: flex;
+                flex-flow: column;
+                background-image: url(../img/top/kv_bg.png);
+                background-repeat: no-repeat;
+                background-position: top left;
+                padding-left: 24px;
+                margin-left: 24px;
+                .main {
+                    font-family: "Lato", sans-serif;
+                    font-size: 10rem;
+                    font-weight: 900;
+                    line-height: 13rem;
+                    letter-spacing: .05em;
+                    background-clip: text;
+                    img {
+                        mask-image: url(./img/top/kv_ttl.png);
+                    }
+                }
+                .sub {
+                    font-size: 2.8rem;
+                }
+            }
+            .img {
+                img {
+                    width: 497px;
+                    height: 504px;
+                }
             }
         }
     }
+    // // テキスト拡大→動画の実装が難航中のため一旦コメントアウト
+    //
+    // .title {
+    //     display: flex;
+    //     align-items: center;
+    //     width: 100%;
+    //     height: 100%;
+    //     // position: relative;
+    //     overflow: hidden;
+    //     .bg,
+    //     .txt {
+    //         position: absolute;
+    //         top: 0;
+    //         left: 0;
+    //         width: 100%;
+    //         height: 100%;
+    //     }
+    //     .bg {
+    //         aspect-ratio: 16 / 9;
+    //         overflow: hidden;
+    //     }
+    //     .txt {
+    //         font-family: "Lato", sans-serif;
+    //         font-size: 6vw;
+    //         font-weight: 900;
+    //         background-color: #fff;
+    //         mix-blend-mode: screen;
+    //         display: flex;
+    //         align-items: center;
+    //         padding-left: calc( 100 / 1400 * 100vw );
+    //     }
+    // }
+}
+
+.section_wrap {
+    background-color: #FFF;
+    padding-top: 100px;
 }
 
 /*-----------------------------------------
@@ -122,6 +211,30 @@ cssへの直記入はなさらないようにしてください。
         @include v.mq-down{
             font-size: clamp(14px, 4vw, 16px);
         }
+    }
+}
+
+/*-----------------------------------------
+introduction
+-----------------------------------------*/
+.sec_intro {
+    margin: 100vh 0 0;
+    padding: 30vh 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/top/intro_bg.png);
+    background-size: 1009px 365px;
+    background-repeat: no-repeat;
+    background-position: 40% center;
+    .txt {
+        text-align: center;
+        font-size: 4.3rem;
+        font-weight: bold;
+        line-height: 6.5rem;
+        display: flex;
+        align-items: center;
     }
 }
 
